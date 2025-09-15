@@ -1,0 +1,1244 @@
+{
+    "tests/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py::test_reentrancy_selfdestruct_revert[fork_Cancun-state_test-second_suicide_CALL-first_suicide_CALLCODE]": {
+        "env": {
+            "currentCoinbase": "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentGasLimit": "0x055d4a80",
+            "currentNumber": "0x01",
+            "currentTimestamp": "0x03e8",
+            "currentRandom": "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentDifficulty": "0x00",
+            "currentBaseFee": "0x07",
+            "currentExcessBlobGas": "0x00"
+        },
+        "pre": {
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                "nonce": "0x00",
+                "balance": "0x3635c9adc5dea00000",
+                "code": "0x",
+                "storage": {}
+            },
+            "0x1000000000000000000000000000000000001000": {
+                "nonce": "0x01",
+                "balance": "0x0493e0",
+                "code": "0x738a0a19589531694250d570040a0c4b74576919b8ff",
+                "storage": {}
+            },
+            "0x1000000000000000000000000000000000001100": {
+                "nonce": "0x01",
+                "balance": "0x07a120",
+                "code": "0x600060006000600060647310000000000000000000000000000000000010005af1600f0160005260206000fd",
+                "storage": {}
+            },
+            "0x1000000000000000000000000000000000001200": {
+                "nonce": "0x01",
+                "balance": "0x0186a0",
+                "code": "0x600060006000600060007310000000000000000000000000000000000010005af2600155600060006000600060007310000000000000000000000000000000000011005af16002553d600060003e600051600355",
+                "storage": {
+                    "0x01": "0x0100",
+                    "0x02": "0x0100",
+                    "0x03": "0x0100"
+                }
+            }
+        },
+        "transaction": {
+            "nonce": "0x00",
+            "gasPrice": "0x0a",
+            "gasLimit": [
+                "0x07a120"
+            ],
+            "to": "0x1000000000000000000000000000000000001200",
+            "value": [
+                "0x00"
+            ],
+            "data": [
+                "0x"
+            ],
+            "sender": "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "secretKey": "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8"
+        },
+        "post": {
+            "Cancun": [
+                {
+                    "hash": "0x46edb044118d446346c1e74eb98f8bdc019883a0b6bc2d5d3228726be5e495b2",
+                    "logs": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes": "0xf860800a8307a120941000000000000000000000000000000000001200808026a0249e105e7c0895de74580464c20988135c6a9c84ab4a42d95f7c0b92264f5faca033009339bdc991d748bee7c4d1f624184ed7549a75268383dba398e074b1a8d7",
+                    "indexes": {
+                        "data": 0,
+                        "gas": 0,
+                        "value": 0
+                    },
+                    "state": {
+                        "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                            "nonce": "0x01",
+                            "balance": "0x3635c9adc5de93a71a",
+                            "code": "0x",
+                            "storage": {}
+                        },
+                        "0x1000000000000000000000000000000000001000": {
+                            "nonce": "0x01",
+                            "balance": "0x0493e0",
+                            "code": "0x738a0a19589531694250d570040a0c4b74576919b8ff",
+                            "storage": {}
+                        },
+                        "0x1000000000000000000000000000000000001100": {
+                            "nonce": "0x01",
+                            "balance": "0x07a120",
+                            "code": "0x600060006000600060647310000000000000000000000000000000000010005af1600f0160005260206000fd",
+                            "storage": {}
+                        },
+                        "0x1000000000000000000000000000000000001200": {
+                            "nonce": "0x01",
+                            "balance": "0x00",
+                            "code": "0x600060006000600060007310000000000000000000000000000000000010005af2600155600060006000600060007310000000000000000000000000000000000011005af16002553d600060003e600051600355",
+                            "storage": {
+                                "0x01": "0x01",
+                                "0x03": "0x10"
+                            }
+                        },
+                        "0x8a0a19589531694250d570040a0c4b74576919b8": {
+                            "nonce": "0x00",
+                            "balance": "0x0186a0",
+                            "code": "0x",
+                            "storage": {}
+                        },
+                        "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba": {
+                            "nonce": "0x00",
+                            "balance": "0x03b445",
+                            "code": "0x",
+                            "storage": {}
+                        }
+                    }
+                }
+            ]
+        },
+        "config": {
+            "blobSchedule": {
+                "Cancun": {
+                    "target": "0x03",
+                    "max": "0x06",
+                    "baseFeeUpdateFraction": "0x32f0ed"
+                }
+            },
+            "chainid": "0x01"
+        },
+        "_info": {
+            "hash": "0xe0f06b343f14fb3e0889b53343308ea3dd547e40329b206ceff428abef4a8450",
+            "comment": "`execution-spec-tests` generated test",
+            "filling-transition-tool": "ethereum-spec-evm-resolver 0.0.5",
+            "description": "Suicide reentrancy scenario.\n\n    Call|Callcode|Delegatecall the contract S.\n    S self destructs.\n    Call the revert proxy contract R.\n    R Calls|Callcode|Delegatecall S.\n    S self destructs (for the second time).\n    R reverts (including the effects of the second selfdestruct).\n    It is expected the S is self destructed after the transaction.",
+            "url": "https://github.com/ethereum/execution-spec-tests/blob/20770a694f440aeb4ea3ec86a3b9bc04d40146a3/tests/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py#L128",
+            "fixture-format": "state_test",
+            "reference-spec": "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-6780.md",
+            "reference-spec-version": "1b6a0e94cc47e859b9866e570391cf37dc55059a",
+            "eels-resolution": {
+                "git-url": "https://github.com/marioevz/execution-specs.git",
+                "branch": "forks/bpo1",
+                "commit": "3387e5f4aedfe99becfdc39b444d6371e25e0924"
+            }
+        }
+    },
+    "tests/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py::test_reentrancy_selfdestruct_revert[fork_Cancun-state_test-second_suicide_CALL-first_suicide_CALL]": {
+        "env": {
+            "currentCoinbase": "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentGasLimit": "0x055d4a80",
+            "currentNumber": "0x01",
+            "currentTimestamp": "0x03e8",
+            "currentRandom": "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentDifficulty": "0x00",
+            "currentBaseFee": "0x07",
+            "currentExcessBlobGas": "0x00"
+        },
+        "pre": {
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                "nonce": "0x00",
+                "balance": "0x3635c9adc5dea00000",
+                "code": "0x",
+                "storage": {}
+            },
+            "0x1000000000000000000000000000000000001000": {
+                "nonce": "0x01",
+                "balance": "0x0493e0",
+                "code": "0x738a0a19589531694250d570040a0c4b74576919b8ff",
+                "storage": {}
+            },
+            "0x1000000000000000000000000000000000001100": {
+                "nonce": "0x01",
+                "balance": "0x07a120",
+                "code": "0x600060006000600060647310000000000000000000000000000000000010005af1600f0160005260206000fd",
+                "storage": {}
+            },
+            "0x1000000000000000000000000000000000001200": {
+                "nonce": "0x01",
+                "balance": "0x0186a0",
+                "code": "0x600060006000600060007310000000000000000000000000000000000010005af1600155600060006000600060007310000000000000000000000000000000000011005af16002553d600060003e600051600355",
+                "storage": {
+                    "0x01": "0x0100",
+                    "0x02": "0x0100",
+                    "0x03": "0x0100"
+                }
+            }
+        },
+        "transaction": {
+            "nonce": "0x00",
+            "gasPrice": "0x0a",
+            "gasLimit": [
+                "0x07a120"
+            ],
+            "to": "0x1000000000000000000000000000000000001200",
+            "value": [
+                "0x00"
+            ],
+            "data": [
+                "0x"
+            ],
+            "sender": "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "secretKey": "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8"
+        },
+        "post": {
+            "Cancun": [
+                {
+                    "hash": "0x52c52fcef7e7134eb09a37815b9aee581258d3b0be15a97b502c1536186d910a",
+                    "logs": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes": "0xf860800a8307a120941000000000000000000000000000000000001200808026a0249e105e7c0895de74580464c20988135c6a9c84ab4a42d95f7c0b92264f5faca033009339bdc991d748bee7c4d1f624184ed7549a75268383dba398e074b1a8d7",
+                    "indexes": {
+                        "data": 0,
+                        "gas": 0,
+                        "value": 0
+                    },
+                    "state": {
+                        "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                            "nonce": "0x01",
+                            "balance": "0x3635c9adc5de93a71a",
+                            "code": "0x",
+                            "storage": {}
+                        },
+                        "0x1000000000000000000000000000000000001000": {
+                            "nonce": "0x01",
+                            "balance": "0x00",
+                            "code": "0x738a0a19589531694250d570040a0c4b74576919b8ff",
+                            "storage": {}
+                        },
+                        "0x1000000000000000000000000000000000001100": {
+                            "nonce": "0x01",
+                            "balance": "0x07a120",
+                            "code": "0x600060006000600060647310000000000000000000000000000000000010005af1600f0160005260206000fd",
+                            "storage": {}
+                        },
+                        "0x1000000000000000000000000000000000001200": {
+                            "nonce": "0x01",
+                            "balance": "0x0186a0",
+                            "code": "0x600060006000600060007310000000000000000000000000000000000010005af1600155600060006000600060007310000000000000000000000000000000000011005af16002553d600060003e600051600355",
+                            "storage": {
+                                "0x01": "0x01",
+                                "0x03": "0x10"
+                            }
+                        },
+                        "0x8a0a19589531694250d570040a0c4b74576919b8": {
+                            "nonce": "0x00",
+                            "balance": "0x0493e0",
+                            "code": "0x",
+                            "storage": {}
+                        },
+                        "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba": {
+                            "nonce": "0x00",
+                            "balance": "0x03b445",
+                            "code": "0x",
+                            "storage": {}
+                        }
+                    }
+                }
+            ]
+        },
+        "config": {
+            "blobSchedule": {
+                "Cancun": {
+                    "target": "0x03",
+                    "max": "0x06",
+                    "baseFeeUpdateFraction": "0x32f0ed"
+                }
+            },
+            "chainid": "0x01"
+        },
+        "_info": {
+            "hash": "0x256631926469cf083716af2d27d6fcedc374fbcb8e5a05131b3530706489def8",
+            "comment": "`execution-spec-tests` generated test",
+            "filling-transition-tool": "ethereum-spec-evm-resolver 0.0.5",
+            "description": "Suicide reentrancy scenario.\n\n    Call|Callcode|Delegatecall the contract S.\n    S self destructs.\n    Call the revert proxy contract R.\n    R Calls|Callcode|Delegatecall S.\n    S self destructs (for the second time).\n    R reverts (including the effects of the second selfdestruct).\n    It is expected the S is self destructed after the transaction.",
+            "url": "https://github.com/ethereum/execution-spec-tests/blob/20770a694f440aeb4ea3ec86a3b9bc04d40146a3/tests/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py#L128",
+            "fixture-format": "state_test",
+            "reference-spec": "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-6780.md",
+            "reference-spec-version": "1b6a0e94cc47e859b9866e570391cf37dc55059a",
+            "eels-resolution": {
+                "git-url": "https://github.com/marioevz/execution-specs.git",
+                "branch": "forks/bpo1",
+                "commit": "3387e5f4aedfe99becfdc39b444d6371e25e0924"
+            }
+        }
+    },
+    "tests/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py::test_reentrancy_selfdestruct_revert[fork_Cancun-state_test-second_suicide_CALL-first_suicide_DELEGATECALL]": {
+        "env": {
+            "currentCoinbase": "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentGasLimit": "0x055d4a80",
+            "currentNumber": "0x01",
+            "currentTimestamp": "0x03e8",
+            "currentRandom": "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentDifficulty": "0x00",
+            "currentBaseFee": "0x07",
+            "currentExcessBlobGas": "0x00"
+        },
+        "pre": {
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                "nonce": "0x00",
+                "balance": "0x3635c9adc5dea00000",
+                "code": "0x",
+                "storage": {}
+            },
+            "0x1000000000000000000000000000000000001000": {
+                "nonce": "0x01",
+                "balance": "0x0493e0",
+                "code": "0x738a0a19589531694250d570040a0c4b74576919b8ff",
+                "storage": {}
+            },
+            "0x1000000000000000000000000000000000001100": {
+                "nonce": "0x01",
+                "balance": "0x07a120",
+                "code": "0x600060006000600060647310000000000000000000000000000000000010005af1600f0160005260206000fd",
+                "storage": {}
+            },
+            "0x1000000000000000000000000000000000001200": {
+                "nonce": "0x01",
+                "balance": "0x0186a0",
+                "code": "0x60006000600060007310000000000000000000000000000000000010005af4600155600060006000600060007310000000000000000000000000000000000011005af16002553d600060003e600051600355",
+                "storage": {
+                    "0x01": "0x0100",
+                    "0x02": "0x0100",
+                    "0x03": "0x0100"
+                }
+            }
+        },
+        "transaction": {
+            "nonce": "0x00",
+            "gasPrice": "0x0a",
+            "gasLimit": [
+                "0x07a120"
+            ],
+            "to": "0x1000000000000000000000000000000000001200",
+            "value": [
+                "0x00"
+            ],
+            "data": [
+                "0x"
+            ],
+            "sender": "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "secretKey": "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8"
+        },
+        "post": {
+            "Cancun": [
+                {
+                    "hash": "0x84c4c7b15a9bf44e7d695bb280f2b64e10077dd9d8e101daa64cf9a4b3001e70",
+                    "logs": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes": "0xf860800a8307a120941000000000000000000000000000000000001200808026a0249e105e7c0895de74580464c20988135c6a9c84ab4a42d95f7c0b92264f5faca033009339bdc991d748bee7c4d1f624184ed7549a75268383dba398e074b1a8d7",
+                    "indexes": {
+                        "data": 0,
+                        "gas": 0,
+                        "value": 0
+                    },
+                    "state": {
+                        "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                            "nonce": "0x01",
+                            "balance": "0x3635c9adc5de93a738",
+                            "code": "0x",
+                            "storage": {}
+                        },
+                        "0x1000000000000000000000000000000000001000": {
+                            "nonce": "0x01",
+                            "balance": "0x0493e0",
+                            "code": "0x738a0a19589531694250d570040a0c4b74576919b8ff",
+                            "storage": {}
+                        },
+                        "0x1000000000000000000000000000000000001100": {
+                            "nonce": "0x01",
+                            "balance": "0x07a120",
+                            "code": "0x600060006000600060647310000000000000000000000000000000000010005af1600f0160005260206000fd",
+                            "storage": {}
+                        },
+                        "0x1000000000000000000000000000000000001200": {
+                            "nonce": "0x01",
+                            "balance": "0x00",
+                            "code": "0x60006000600060007310000000000000000000000000000000000010005af4600155600060006000600060007310000000000000000000000000000000000011005af16002553d600060003e600051600355",
+                            "storage": {
+                                "0x01": "0x01",
+                                "0x03": "0x10"
+                            }
+                        },
+                        "0x8a0a19589531694250d570040a0c4b74576919b8": {
+                            "nonce": "0x00",
+                            "balance": "0x0186a0",
+                            "code": "0x",
+                            "storage": {}
+                        },
+                        "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba": {
+                            "nonce": "0x00",
+                            "balance": "0x03b43c",
+                            "code": "0x",
+                            "storage": {}
+                        }
+                    }
+                }
+            ]
+        },
+        "config": {
+            "blobSchedule": {
+                "Cancun": {
+                    "target": "0x03",
+                    "max": "0x06",
+                    "baseFeeUpdateFraction": "0x32f0ed"
+                }
+            },
+            "chainid": "0x01"
+        },
+        "_info": {
+            "hash": "0x0bcf16bad3b90896276e794f23cde8adb01f7f914ff354aa03a2e7168e71fbf3",
+            "comment": "`execution-spec-tests` generated test",
+            "filling-transition-tool": "ethereum-spec-evm-resolver 0.0.5",
+            "description": "Suicide reentrancy scenario.\n\n    Call|Callcode|Delegatecall the contract S.\n    S self destructs.\n    Call the revert proxy contract R.\n    R Calls|Callcode|Delegatecall S.\n    S self destructs (for the second time).\n    R reverts (including the effects of the second selfdestruct).\n    It is expected the S is self destructed after the transaction.",
+            "url": "https://github.com/ethereum/execution-spec-tests/blob/20770a694f440aeb4ea3ec86a3b9bc04d40146a3/tests/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py#L128",
+            "fixture-format": "state_test",
+            "reference-spec": "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-6780.md",
+            "reference-spec-version": "1b6a0e94cc47e859b9866e570391cf37dc55059a",
+            "eels-resolution": {
+                "git-url": "https://github.com/marioevz/execution-specs.git",
+                "branch": "forks/bpo1",
+                "commit": "3387e5f4aedfe99becfdc39b444d6371e25e0924"
+            }
+        }
+    },
+    "tests/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py::test_reentrancy_selfdestruct_revert[fork_Cancun-state_test-second_suicide_CALLCODE-first_suicide_CALLCODE]": {
+        "env": {
+            "currentCoinbase": "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentGasLimit": "0x055d4a80",
+            "currentNumber": "0x01",
+            "currentTimestamp": "0x03e8",
+            "currentRandom": "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentDifficulty": "0x00",
+            "currentBaseFee": "0x07",
+            "currentExcessBlobGas": "0x00"
+        },
+        "pre": {
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                "nonce": "0x00",
+                "balance": "0x3635c9adc5dea00000",
+                "code": "0x",
+                "storage": {}
+            },
+            "0x1000000000000000000000000000000000001000": {
+                "nonce": "0x01",
+                "balance": "0x0493e0",
+                "code": "0x738a0a19589531694250d570040a0c4b74576919b8ff",
+                "storage": {}
+            },
+            "0x1000000000000000000000000000000000001100": {
+                "nonce": "0x01",
+                "balance": "0x07a120",
+                "code": "0x600060006000600060647310000000000000000000000000000000000010005af2600f0160005260206000fd",
+                "storage": {}
+            },
+            "0x1000000000000000000000000000000000001200": {
+                "nonce": "0x01",
+                "balance": "0x0186a0",
+                "code": "0x600060006000600060007310000000000000000000000000000000000010005af2600155600060006000600060007310000000000000000000000000000000000011005af16002553d600060003e600051600355",
+                "storage": {
+                    "0x01": "0x0100",
+                    "0x02": "0x0100",
+                    "0x03": "0x0100"
+                }
+            }
+        },
+        "transaction": {
+            "nonce": "0x00",
+            "gasPrice": "0x0a",
+            "gasLimit": [
+                "0x07a120"
+            ],
+            "to": "0x1000000000000000000000000000000000001200",
+            "value": [
+                "0x00"
+            ],
+            "data": [
+                "0x"
+            ],
+            "sender": "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "secretKey": "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8"
+        },
+        "post": {
+            "Cancun": [
+                {
+                    "hash": "0xb74722e3e9d0d5367d2af07ddcc57fef1bb694a15a785eda1ae838cec678feb5",
+                    "logs": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes": "0xf860800a8307a120941000000000000000000000000000000000001200808026a0249e105e7c0895de74580464c20988135c6a9c84ab4a42d95f7c0b92264f5faca033009339bdc991d748bee7c4d1f624184ed7549a75268383dba398e074b1a8d7",
+                    "indexes": {
+                        "data": 0,
+                        "gas": 0,
+                        "value": 0
+                    },
+                    "state": {
+                        "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                            "nonce": "0x01",
+                            "balance": "0x3635c9adc5de93a71a",
+                            "code": "0x",
+                            "storage": {}
+                        },
+                        "0x1000000000000000000000000000000000001000": {
+                            "nonce": "0x01",
+                            "balance": "0x0493e0",
+                            "code": "0x738a0a19589531694250d570040a0c4b74576919b8ff",
+                            "storage": {}
+                        },
+                        "0x1000000000000000000000000000000000001100": {
+                            "nonce": "0x01",
+                            "balance": "0x07a120",
+                            "code": "0x600060006000600060647310000000000000000000000000000000000010005af2600f0160005260206000fd",
+                            "storage": {}
+                        },
+                        "0x1000000000000000000000000000000000001200": {
+                            "nonce": "0x01",
+                            "balance": "0x00",
+                            "code": "0x600060006000600060007310000000000000000000000000000000000010005af2600155600060006000600060007310000000000000000000000000000000000011005af16002553d600060003e600051600355",
+                            "storage": {
+                                "0x01": "0x01",
+                                "0x03": "0x10"
+                            }
+                        },
+                        "0x8a0a19589531694250d570040a0c4b74576919b8": {
+                            "nonce": "0x00",
+                            "balance": "0x0186a0",
+                            "code": "0x",
+                            "storage": {}
+                        },
+                        "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba": {
+                            "nonce": "0x00",
+                            "balance": "0x03b445",
+                            "code": "0x",
+                            "storage": {}
+                        }
+                    }
+                }
+            ]
+        },
+        "config": {
+            "blobSchedule": {
+                "Cancun": {
+                    "target": "0x03",
+                    "max": "0x06",
+                    "baseFeeUpdateFraction": "0x32f0ed"
+                }
+            },
+            "chainid": "0x01"
+        },
+        "_info": {
+            "hash": "0x60f2ba0084fd1becbd7a56859c27130dfb8b7438f22bdc47b2a45f485a630df7",
+            "comment": "`execution-spec-tests` generated test",
+            "filling-transition-tool": "ethereum-spec-evm-resolver 0.0.5",
+            "description": "Suicide reentrancy scenario.\n\n    Call|Callcode|Delegatecall the contract S.\n    S self destructs.\n    Call the revert proxy contract R.\n    R Calls|Callcode|Delegatecall S.\n    S self destructs (for the second time).\n    R reverts (including the effects of the second selfdestruct).\n    It is expected the S is self destructed after the transaction.",
+            "url": "https://github.com/ethereum/execution-spec-tests/blob/20770a694f440aeb4ea3ec86a3b9bc04d40146a3/tests/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py#L128",
+            "fixture-format": "state_test",
+            "reference-spec": "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-6780.md",
+            "reference-spec-version": "1b6a0e94cc47e859b9866e570391cf37dc55059a",
+            "eels-resolution": {
+                "git-url": "https://github.com/marioevz/execution-specs.git",
+                "branch": "forks/bpo1",
+                "commit": "3387e5f4aedfe99becfdc39b444d6371e25e0924"
+            }
+        }
+    },
+    "tests/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py::test_reentrancy_selfdestruct_revert[fork_Cancun-state_test-second_suicide_CALLCODE-first_suicide_CALL]": {
+        "env": {
+            "currentCoinbase": "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentGasLimit": "0x055d4a80",
+            "currentNumber": "0x01",
+            "currentTimestamp": "0x03e8",
+            "currentRandom": "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentDifficulty": "0x00",
+            "currentBaseFee": "0x07",
+            "currentExcessBlobGas": "0x00"
+        },
+        "pre": {
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                "nonce": "0x00",
+                "balance": "0x3635c9adc5dea00000",
+                "code": "0x",
+                "storage": {}
+            },
+            "0x1000000000000000000000000000000000001000": {
+                "nonce": "0x01",
+                "balance": "0x0493e0",
+                "code": "0x738a0a19589531694250d570040a0c4b74576919b8ff",
+                "storage": {}
+            },
+            "0x1000000000000000000000000000000000001100": {
+                "nonce": "0x01",
+                "balance": "0x07a120",
+                "code": "0x600060006000600060647310000000000000000000000000000000000010005af2600f0160005260206000fd",
+                "storage": {}
+            },
+            "0x1000000000000000000000000000000000001200": {
+                "nonce": "0x01",
+                "balance": "0x0186a0",
+                "code": "0x600060006000600060007310000000000000000000000000000000000010005af1600155600060006000600060007310000000000000000000000000000000000011005af16002553d600060003e600051600355",
+                "storage": {
+                    "0x01": "0x0100",
+                    "0x02": "0x0100",
+                    "0x03": "0x0100"
+                }
+            }
+        },
+        "transaction": {
+            "nonce": "0x00",
+            "gasPrice": "0x0a",
+            "gasLimit": [
+                "0x07a120"
+            ],
+            "to": "0x1000000000000000000000000000000000001200",
+            "value": [
+                "0x00"
+            ],
+            "data": [
+                "0x"
+            ],
+            "sender": "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "secretKey": "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8"
+        },
+        "post": {
+            "Cancun": [
+                {
+                    "hash": "0xb626a4e31baf1a97fdc735952f4cca4f47661f178f6241ff3e333b6170dab8d3",
+                    "logs": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes": "0xf860800a8307a120941000000000000000000000000000000000001200808026a0249e105e7c0895de74580464c20988135c6a9c84ab4a42d95f7c0b92264f5faca033009339bdc991d748bee7c4d1f624184ed7549a75268383dba398e074b1a8d7",
+                    "indexes": {
+                        "data": 0,
+                        "gas": 0,
+                        "value": 0
+                    },
+                    "state": {
+                        "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                            "nonce": "0x01",
+                            "balance": "0x3635c9adc5de93a71a",
+                            "code": "0x",
+                            "storage": {}
+                        },
+                        "0x1000000000000000000000000000000000001000": {
+                            "nonce": "0x01",
+                            "balance": "0x00",
+                            "code": "0x738a0a19589531694250d570040a0c4b74576919b8ff",
+                            "storage": {}
+                        },
+                        "0x1000000000000000000000000000000000001100": {
+                            "nonce": "0x01",
+                            "balance": "0x07a120",
+                            "code": "0x600060006000600060647310000000000000000000000000000000000010005af2600f0160005260206000fd",
+                            "storage": {}
+                        },
+                        "0x1000000000000000000000000000000000001200": {
+                            "nonce": "0x01",
+                            "balance": "0x0186a0",
+                            "code": "0x600060006000600060007310000000000000000000000000000000000010005af1600155600060006000600060007310000000000000000000000000000000000011005af16002553d600060003e600051600355",
+                            "storage": {
+                                "0x01": "0x01",
+                                "0x03": "0x10"
+                            }
+                        },
+                        "0x8a0a19589531694250d570040a0c4b74576919b8": {
+                            "nonce": "0x00",
+                            "balance": "0x0493e0",
+                            "code": "0x",
+                            "storage": {}
+                        },
+                        "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba": {
+                            "nonce": "0x00",
+                            "balance": "0x03b445",
+                            "code": "0x",
+                            "storage": {}
+                        }
+                    }
+                }
+            ]
+        },
+        "config": {
+            "blobSchedule": {
+                "Cancun": {
+                    "target": "0x03",
+                    "max": "0x06",
+                    "baseFeeUpdateFraction": "0x32f0ed"
+                }
+            },
+            "chainid": "0x01"
+        },
+        "_info": {
+            "hash": "0x888f885adb37c5b86c8d34634fb0cf57b4160f0ab48b1a79a0f5e84c74a78c2f",
+            "comment": "`execution-spec-tests` generated test",
+            "filling-transition-tool": "ethereum-spec-evm-resolver 0.0.5",
+            "description": "Suicide reentrancy scenario.\n\n    Call|Callcode|Delegatecall the contract S.\n    S self destructs.\n    Call the revert proxy contract R.\n    R Calls|Callcode|Delegatecall S.\n    S self destructs (for the second time).\n    R reverts (including the effects of the second selfdestruct).\n    It is expected the S is self destructed after the transaction.",
+            "url": "https://github.com/ethereum/execution-spec-tests/blob/20770a694f440aeb4ea3ec86a3b9bc04d40146a3/tests/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py#L128",
+            "fixture-format": "state_test",
+            "reference-spec": "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-6780.md",
+            "reference-spec-version": "1b6a0e94cc47e859b9866e570391cf37dc55059a",
+            "eels-resolution": {
+                "git-url": "https://github.com/marioevz/execution-specs.git",
+                "branch": "forks/bpo1",
+                "commit": "3387e5f4aedfe99becfdc39b444d6371e25e0924"
+            }
+        }
+    },
+    "tests/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py::test_reentrancy_selfdestruct_revert[fork_Cancun-state_test-second_suicide_CALLCODE-first_suicide_DELEGATECALL]": {
+        "env": {
+            "currentCoinbase": "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentGasLimit": "0x055d4a80",
+            "currentNumber": "0x01",
+            "currentTimestamp": "0x03e8",
+            "currentRandom": "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentDifficulty": "0x00",
+            "currentBaseFee": "0x07",
+            "currentExcessBlobGas": "0x00"
+        },
+        "pre": {
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                "nonce": "0x00",
+                "balance": "0x3635c9adc5dea00000",
+                "code": "0x",
+                "storage": {}
+            },
+            "0x1000000000000000000000000000000000001000": {
+                "nonce": "0x01",
+                "balance": "0x0493e0",
+                "code": "0x738a0a19589531694250d570040a0c4b74576919b8ff",
+                "storage": {}
+            },
+            "0x1000000000000000000000000000000000001100": {
+                "nonce": "0x01",
+                "balance": "0x07a120",
+                "code": "0x600060006000600060647310000000000000000000000000000000000010005af2600f0160005260206000fd",
+                "storage": {}
+            },
+            "0x1000000000000000000000000000000000001200": {
+                "nonce": "0x01",
+                "balance": "0x0186a0",
+                "code": "0x60006000600060007310000000000000000000000000000000000010005af4600155600060006000600060007310000000000000000000000000000000000011005af16002553d600060003e600051600355",
+                "storage": {
+                    "0x01": "0x0100",
+                    "0x02": "0x0100",
+                    "0x03": "0x0100"
+                }
+            }
+        },
+        "transaction": {
+            "nonce": "0x00",
+            "gasPrice": "0x0a",
+            "gasLimit": [
+                "0x07a120"
+            ],
+            "to": "0x1000000000000000000000000000000000001200",
+            "value": [
+                "0x00"
+            ],
+            "data": [
+                "0x"
+            ],
+            "sender": "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "secretKey": "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8"
+        },
+        "post": {
+            "Cancun": [
+                {
+                    "hash": "0xf4dcc0be91c5ae66378591e550d7dafcd7bb04a0c317981a3cdd0f0d1dceaada",
+                    "logs": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes": "0xf860800a8307a120941000000000000000000000000000000000001200808026a0249e105e7c0895de74580464c20988135c6a9c84ab4a42d95f7c0b92264f5faca033009339bdc991d748bee7c4d1f624184ed7549a75268383dba398e074b1a8d7",
+                    "indexes": {
+                        "data": 0,
+                        "gas": 0,
+                        "value": 0
+                    },
+                    "state": {
+                        "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                            "nonce": "0x01",
+                            "balance": "0x3635c9adc5de93a738",
+                            "code": "0x",
+                            "storage": {}
+                        },
+                        "0x1000000000000000000000000000000000001000": {
+                            "nonce": "0x01",
+                            "balance": "0x0493e0",
+                            "code": "0x738a0a19589531694250d570040a0c4b74576919b8ff",
+                            "storage": {}
+                        },
+                        "0x1000000000000000000000000000000000001100": {
+                            "nonce": "0x01",
+                            "balance": "0x07a120",
+                            "code": "0x600060006000600060647310000000000000000000000000000000000010005af2600f0160005260206000fd",
+                            "storage": {}
+                        },
+                        "0x1000000000000000000000000000000000001200": {
+                            "nonce": "0x01",
+                            "balance": "0x00",
+                            "code": "0x60006000600060007310000000000000000000000000000000000010005af4600155600060006000600060007310000000000000000000000000000000000011005af16002553d600060003e600051600355",
+                            "storage": {
+                                "0x01": "0x01",
+                                "0x03": "0x10"
+                            }
+                        },
+                        "0x8a0a19589531694250d570040a0c4b74576919b8": {
+                            "nonce": "0x00",
+                            "balance": "0x0186a0",
+                            "code": "0x",
+                            "storage": {}
+                        },
+                        "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba": {
+                            "nonce": "0x00",
+                            "balance": "0x03b43c",
+                            "code": "0x",
+                            "storage": {}
+                        }
+                    }
+                }
+            ]
+        },
+        "config": {
+            "blobSchedule": {
+                "Cancun": {
+                    "target": "0x03",
+                    "max": "0x06",
+                    "baseFeeUpdateFraction": "0x32f0ed"
+                }
+            },
+            "chainid": "0x01"
+        },
+        "_info": {
+            "hash": "0x7c740d84b78d7695f0914281f3d7edfe9448e0c2a453e48f74361fb2b9678ad0",
+            "comment": "`execution-spec-tests` generated test",
+            "filling-transition-tool": "ethereum-spec-evm-resolver 0.0.5",
+            "description": "Suicide reentrancy scenario.\n\n    Call|Callcode|Delegatecall the contract S.\n    S self destructs.\n    Call the revert proxy contract R.\n    R Calls|Callcode|Delegatecall S.\n    S self destructs (for the second time).\n    R reverts (including the effects of the second selfdestruct).\n    It is expected the S is self destructed after the transaction.",
+            "url": "https://github.com/ethereum/execution-spec-tests/blob/20770a694f440aeb4ea3ec86a3b9bc04d40146a3/tests/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py#L128",
+            "fixture-format": "state_test",
+            "reference-spec": "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-6780.md",
+            "reference-spec-version": "1b6a0e94cc47e859b9866e570391cf37dc55059a",
+            "eels-resolution": {
+                "git-url": "https://github.com/marioevz/execution-specs.git",
+                "branch": "forks/bpo1",
+                "commit": "3387e5f4aedfe99becfdc39b444d6371e25e0924"
+            }
+        }
+    },
+    "tests/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py::test_reentrancy_selfdestruct_revert[fork_Cancun-state_test-second_suicide_DELEGATECALL-first_suicide_CALLCODE]": {
+        "env": {
+            "currentCoinbase": "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentGasLimit": "0x055d4a80",
+            "currentNumber": "0x01",
+            "currentTimestamp": "0x03e8",
+            "currentRandom": "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentDifficulty": "0x00",
+            "currentBaseFee": "0x07",
+            "currentExcessBlobGas": "0x00"
+        },
+        "pre": {
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                "nonce": "0x00",
+                "balance": "0x3635c9adc5dea00000",
+                "code": "0x",
+                "storage": {}
+            },
+            "0x1000000000000000000000000000000000001000": {
+                "nonce": "0x01",
+                "balance": "0x0493e0",
+                "code": "0x738a0a19589531694250d570040a0c4b74576919b8ff",
+                "storage": {}
+            },
+            "0x1000000000000000000000000000000000001100": {
+                "nonce": "0x01",
+                "balance": "0x07a120",
+                "code": "0x60006000600060007310000000000000000000000000000000000010005af4600f0160005260206000fd",
+                "storage": {}
+            },
+            "0x1000000000000000000000000000000000001200": {
+                "nonce": "0x01",
+                "balance": "0x0186a0",
+                "code": "0x600060006000600060007310000000000000000000000000000000000010005af2600155600060006000600060007310000000000000000000000000000000000011005af16002553d600060003e600051600355",
+                "storage": {
+                    "0x01": "0x0100",
+                    "0x02": "0x0100",
+                    "0x03": "0x0100"
+                }
+            }
+        },
+        "transaction": {
+            "nonce": "0x00",
+            "gasPrice": "0x0a",
+            "gasLimit": [
+                "0x07a120"
+            ],
+            "to": "0x1000000000000000000000000000000000001200",
+            "value": [
+                "0x00"
+            ],
+            "data": [
+                "0x"
+            ],
+            "sender": "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "secretKey": "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8"
+        },
+        "post": {
+            "Cancun": [
+                {
+                    "hash": "0xfbf717ce5f7fafba6ec45bb3238f1bcbfec8d648fb10b69efca2e062ef771df4",
+                    "logs": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes": "0xf860800a8307a120941000000000000000000000000000000000001200808026a0249e105e7c0895de74580464c20988135c6a9c84ab4a42d95f7c0b92264f5faca033009339bdc991d748bee7c4d1f624184ed7549a75268383dba398e074b1a8d7",
+                    "indexes": {
+                        "data": 0,
+                        "gas": 0,
+                        "value": 0
+                    },
+                    "state": {
+                        "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                            "nonce": "0x01",
+                            "balance": "0x3635c9adc5de94acf0",
+                            "code": "0x",
+                            "storage": {}
+                        },
+                        "0x1000000000000000000000000000000000001000": {
+                            "nonce": "0x01",
+                            "balance": "0x0493e0",
+                            "code": "0x738a0a19589531694250d570040a0c4b74576919b8ff",
+                            "storage": {}
+                        },
+                        "0x1000000000000000000000000000000000001100": {
+                            "nonce": "0x01",
+                            "balance": "0x07a120",
+                            "code": "0x60006000600060007310000000000000000000000000000000000010005af4600f0160005260206000fd",
+                            "storage": {}
+                        },
+                        "0x1000000000000000000000000000000000001200": {
+                            "nonce": "0x01",
+                            "balance": "0x00",
+                            "code": "0x600060006000600060007310000000000000000000000000000000000010005af2600155600060006000600060007310000000000000000000000000000000000011005af16002553d600060003e600051600355",
+                            "storage": {
+                                "0x01": "0x01",
+                                "0x03": "0x10"
+                            }
+                        },
+                        "0x8a0a19589531694250d570040a0c4b74576919b8": {
+                            "nonce": "0x00",
+                            "balance": "0x0186a0",
+                            "code": "0x",
+                            "storage": {}
+                        },
+                        "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba": {
+                            "nonce": "0x00",
+                            "balance": "0x0365b8",
+                            "code": "0x",
+                            "storage": {}
+                        }
+                    }
+                }
+            ]
+        },
+        "config": {
+            "blobSchedule": {
+                "Cancun": {
+                    "target": "0x03",
+                    "max": "0x06",
+                    "baseFeeUpdateFraction": "0x32f0ed"
+                }
+            },
+            "chainid": "0x01"
+        },
+        "_info": {
+            "hash": "0xf6c91557dd86e7f1e42b674e030f42748b0ebbe8ca3b72fc6777545078fe0359",
+            "comment": "`execution-spec-tests` generated test",
+            "filling-transition-tool": "ethereum-spec-evm-resolver 0.0.5",
+            "description": "Suicide reentrancy scenario.\n\n    Call|Callcode|Delegatecall the contract S.\n    S self destructs.\n    Call the revert proxy contract R.\n    R Calls|Callcode|Delegatecall S.\n    S self destructs (for the second time).\n    R reverts (including the effects of the second selfdestruct).\n    It is expected the S is self destructed after the transaction.",
+            "url": "https://github.com/ethereum/execution-spec-tests/blob/20770a694f440aeb4ea3ec86a3b9bc04d40146a3/tests/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py#L128",
+            "fixture-format": "state_test",
+            "reference-spec": "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-6780.md",
+            "reference-spec-version": "1b6a0e94cc47e859b9866e570391cf37dc55059a",
+            "eels-resolution": {
+                "git-url": "https://github.com/marioevz/execution-specs.git",
+                "branch": "forks/bpo1",
+                "commit": "3387e5f4aedfe99becfdc39b444d6371e25e0924"
+            }
+        }
+    },
+    "tests/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py::test_reentrancy_selfdestruct_revert[fork_Cancun-state_test-second_suicide_DELEGATECALL-first_suicide_CALL]": {
+        "env": {
+            "currentCoinbase": "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentGasLimit": "0x055d4a80",
+            "currentNumber": "0x01",
+            "currentTimestamp": "0x03e8",
+            "currentRandom": "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentDifficulty": "0x00",
+            "currentBaseFee": "0x07",
+            "currentExcessBlobGas": "0x00"
+        },
+        "pre": {
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                "nonce": "0x00",
+                "balance": "0x3635c9adc5dea00000",
+                "code": "0x",
+                "storage": {}
+            },
+            "0x1000000000000000000000000000000000001000": {
+                "nonce": "0x01",
+                "balance": "0x0493e0",
+                "code": "0x738a0a19589531694250d570040a0c4b74576919b8ff",
+                "storage": {}
+            },
+            "0x1000000000000000000000000000000000001100": {
+                "nonce": "0x01",
+                "balance": "0x07a120",
+                "code": "0x60006000600060007310000000000000000000000000000000000010005af4600f0160005260206000fd",
+                "storage": {}
+            },
+            "0x1000000000000000000000000000000000001200": {
+                "nonce": "0x01",
+                "balance": "0x0186a0",
+                "code": "0x600060006000600060007310000000000000000000000000000000000010005af1600155600060006000600060007310000000000000000000000000000000000011005af16002553d600060003e600051600355",
+                "storage": {
+                    "0x01": "0x0100",
+                    "0x02": "0x0100",
+                    "0x03": "0x0100"
+                }
+            }
+        },
+        "transaction": {
+            "nonce": "0x00",
+            "gasPrice": "0x0a",
+            "gasLimit": [
+                "0x07a120"
+            ],
+            "to": "0x1000000000000000000000000000000000001200",
+            "value": [
+                "0x00"
+            ],
+            "data": [
+                "0x"
+            ],
+            "sender": "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "secretKey": "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8"
+        },
+        "post": {
+            "Cancun": [
+                {
+                    "hash": "0x131d827bb1d7e0ae3413e417cb3de806089a878b1c26998cdf9b9436d3159863",
+                    "logs": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes": "0xf860800a8307a120941000000000000000000000000000000000001200808026a0249e105e7c0895de74580464c20988135c6a9c84ab4a42d95f7c0b92264f5faca033009339bdc991d748bee7c4d1f624184ed7549a75268383dba398e074b1a8d7",
+                    "indexes": {
+                        "data": 0,
+                        "gas": 0,
+                        "value": 0
+                    },
+                    "state": {
+                        "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                            "nonce": "0x01",
+                            "balance": "0x3635c9adc5de94acf0",
+                            "code": "0x",
+                            "storage": {}
+                        },
+                        "0x1000000000000000000000000000000000001000": {
+                            "nonce": "0x01",
+                            "balance": "0x00",
+                            "code": "0x738a0a19589531694250d570040a0c4b74576919b8ff",
+                            "storage": {}
+                        },
+                        "0x1000000000000000000000000000000000001100": {
+                            "nonce": "0x01",
+                            "balance": "0x07a120",
+                            "code": "0x60006000600060007310000000000000000000000000000000000010005af4600f0160005260206000fd",
+                            "storage": {}
+                        },
+                        "0x1000000000000000000000000000000000001200": {
+                            "nonce": "0x01",
+                            "balance": "0x0186a0",
+                            "code": "0x600060006000600060007310000000000000000000000000000000000010005af1600155600060006000600060007310000000000000000000000000000000000011005af16002553d600060003e600051600355",
+                            "storage": {
+                                "0x01": "0x01",
+                                "0x03": "0x10"
+                            }
+                        },
+                        "0x8a0a19589531694250d570040a0c4b74576919b8": {
+                            "nonce": "0x00",
+                            "balance": "0x0493e0",
+                            "code": "0x",
+                            "storage": {}
+                        },
+                        "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba": {
+                            "nonce": "0x00",
+                            "balance": "0x0365b8",
+                            "code": "0x",
+                            "storage": {}
+                        }
+                    }
+                }
+            ]
+        },
+        "config": {
+            "blobSchedule": {
+                "Cancun": {
+                    "target": "0x03",
+                    "max": "0x06",
+                    "baseFeeUpdateFraction": "0x32f0ed"
+                }
+            },
+            "chainid": "0x01"
+        },
+        "_info": {
+            "hash": "0xbabe651d4fea0a570fdea3e5b3125dacb3e33c7ad0091b7fa51db03e4eb44558",
+            "comment": "`execution-spec-tests` generated test",
+            "filling-transition-tool": "ethereum-spec-evm-resolver 0.0.5",
+            "description": "Suicide reentrancy scenario.\n\n    Call|Callcode|Delegatecall the contract S.\n    S self destructs.\n    Call the revert proxy contract R.\n    R Calls|Callcode|Delegatecall S.\n    S self destructs (for the second time).\n    R reverts (including the effects of the second selfdestruct).\n    It is expected the S is self destructed after the transaction.",
+            "url": "https://github.com/ethereum/execution-spec-tests/blob/20770a694f440aeb4ea3ec86a3b9bc04d40146a3/tests/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py#L128",
+            "fixture-format": "state_test",
+            "reference-spec": "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-6780.md",
+            "reference-spec-version": "1b6a0e94cc47e859b9866e570391cf37dc55059a",
+            "eels-resolution": {
+                "git-url": "https://github.com/marioevz/execution-specs.git",
+                "branch": "forks/bpo1",
+                "commit": "3387e5f4aedfe99becfdc39b444d6371e25e0924"
+            }
+        }
+    },
+    "tests/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py::test_reentrancy_selfdestruct_revert[fork_Cancun-state_test-second_suicide_DELEGATECALL-first_suicide_DELEGATECALL]": {
+        "env": {
+            "currentCoinbase": "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentGasLimit": "0x055d4a80",
+            "currentNumber": "0x01",
+            "currentTimestamp": "0x03e8",
+            "currentRandom": "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentDifficulty": "0x00",
+            "currentBaseFee": "0x07",
+            "currentExcessBlobGas": "0x00"
+        },
+        "pre": {
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                "nonce": "0x00",
+                "balance": "0x3635c9adc5dea00000",
+                "code": "0x",
+                "storage": {}
+            },
+            "0x1000000000000000000000000000000000001000": {
+                "nonce": "0x01",
+                "balance": "0x0493e0",
+                "code": "0x738a0a19589531694250d570040a0c4b74576919b8ff",
+                "storage": {}
+            },
+            "0x1000000000000000000000000000000000001100": {
+                "nonce": "0x01",
+                "balance": "0x07a120",
+                "code": "0x60006000600060007310000000000000000000000000000000000010005af4600f0160005260206000fd",
+                "storage": {}
+            },
+            "0x1000000000000000000000000000000000001200": {
+                "nonce": "0x01",
+                "balance": "0x0186a0",
+                "code": "0x60006000600060007310000000000000000000000000000000000010005af4600155600060006000600060007310000000000000000000000000000000000011005af16002553d600060003e600051600355",
+                "storage": {
+                    "0x01": "0x0100",
+                    "0x02": "0x0100",
+                    "0x03": "0x0100"
+                }
+            }
+        },
+        "transaction": {
+            "nonce": "0x00",
+            "gasPrice": "0x0a",
+            "gasLimit": [
+                "0x07a120"
+            ],
+            "to": "0x1000000000000000000000000000000000001200",
+            "value": [
+                "0x00"
+            ],
+            "data": [
+                "0x"
+            ],
+            "sender": "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "secretKey": "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8"
+        },
+        "post": {
+            "Cancun": [
+                {
+                    "hash": "0x4d0efdf51acdd569fb8c3767c5c1e6135631c085b3879d1bfece65ccbcd08b5f",
+                    "logs": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes": "0xf860800a8307a120941000000000000000000000000000000000001200808026a0249e105e7c0895de74580464c20988135c6a9c84ab4a42d95f7c0b92264f5faca033009339bdc991d748bee7c4d1f624184ed7549a75268383dba398e074b1a8d7",
+                    "indexes": {
+                        "data": 0,
+                        "gas": 0,
+                        "value": 0
+                    },
+                    "state": {
+                        "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                            "nonce": "0x01",
+                            "balance": "0x3635c9adc5de94ad0e",
+                            "code": "0x",
+                            "storage": {}
+                        },
+                        "0x1000000000000000000000000000000000001000": {
+                            "nonce": "0x01",
+                            "balance": "0x0493e0",
+                            "code": "0x738a0a19589531694250d570040a0c4b74576919b8ff",
+                            "storage": {}
+                        },
+                        "0x1000000000000000000000000000000000001100": {
+                            "nonce": "0x01",
+                            "balance": "0x07a120",
+                            "code": "0x60006000600060007310000000000000000000000000000000000010005af4600f0160005260206000fd",
+                            "storage": {}
+                        },
+                        "0x1000000000000000000000000000000000001200": {
+                            "nonce": "0x01",
+                            "balance": "0x00",
+                            "code": "0x60006000600060007310000000000000000000000000000000000010005af4600155600060006000600060007310000000000000000000000000000000000011005af16002553d600060003e600051600355",
+                            "storage": {
+                                "0x01": "0x01",
+                                "0x03": "0x10"
+                            }
+                        },
+                        "0x8a0a19589531694250d570040a0c4b74576919b8": {
+                            "nonce": "0x00",
+                            "balance": "0x0186a0",
+                            "code": "0x",
+                            "storage": {}
+                        },
+                        "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba": {
+                            "nonce": "0x00",
+                            "balance": "0x0365af",
+                            "code": "0x",
+                            "storage": {}
+                        }
+                    }
+                }
+            ]
+        },
+        "config": {
+            "blobSchedule": {
+                "Cancun": {
+                    "target": "0x03",
+                    "max": "0x06",
+                    "baseFeeUpdateFraction": "0x32f0ed"
+                }
+            },
+            "chainid": "0x01"
+        },
+        "_info": {
+            "hash": "0xa84a46346668a187e4b312094dd53a4daefaf72c2569cdc2dc9b59ad38511b24",
+            "comment": "`execution-spec-tests` generated test",
+            "filling-transition-tool": "ethereum-spec-evm-resolver 0.0.5",
+            "description": "Suicide reentrancy scenario.\n\n    Call|Callcode|Delegatecall the contract S.\n    S self destructs.\n    Call the revert proxy contract R.\n    R Calls|Callcode|Delegatecall S.\n    S self destructs (for the second time).\n    R reverts (including the effects of the second selfdestruct).\n    It is expected the S is self destructed after the transaction.",
+            "url": "https://github.com/ethereum/execution-spec-tests/blob/20770a694f440aeb4ea3ec86a3b9bc04d40146a3/tests/cancun/eip6780_selfdestruct/test_reentrancy_selfdestruct_revert.py#L128",
+            "fixture-format": "state_test",
+            "reference-spec": "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-6780.md",
+            "reference-spec-version": "1b6a0e94cc47e859b9866e570391cf37dc55059a",
+            "eels-resolution": {
+                "git-url": "https://github.com/marioevz/execution-specs.git",
+                "branch": "forks/bpo1",
+                "commit": "3387e5f4aedfe99becfdc39b444d6371e25e0924"
+            }
+        }
+    }
+}

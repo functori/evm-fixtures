@@ -1,0 +1,1148 @@
+{
+    "tests/cancun/eip1153_tstore/test_tstorage_create_contexts.py::TestTransientStorageInContractCreation::test_contract_creation[fork_Cancun-state_test-across_constructor_and_deployed_code_v0-create2]": {
+        "env": {
+            "currentCoinbase": "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentGasLimit": "0x055d4a80",
+            "currentNumber": "0x01",
+            "currentTimestamp": "0x03e8",
+            "currentRandom": "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentDifficulty": "0x00",
+            "currentBaseFee": "0x07",
+            "currentExcessBlobGas": "0x00"
+        },
+        "pre": {
+            "0x1000000000000000000000000000000000001000": {
+                "nonce": "0x01",
+                "balance": "0x00",
+                "code": "0x61010060005d61020060015d61030060025d3660006000376000600060006000600063deadbeef3660006000f55af160045560005c60005560015c60015560025c600255",
+                "storage": {}
+            },
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                "nonce": "0x00",
+                "balance": "0x3635c9adc5dea00000",
+                "code": "0x",
+                "storage": {}
+            }
+        },
+        "transaction": {
+            "nonce": "0x00",
+            "gasPrice": "0x0a",
+            "gasLimit": [
+                "0x0f4240"
+            ],
+            "to": "0x1000000000000000000000000000000000001000",
+            "value": [
+                "0x00"
+            ],
+            "data": [
+                "0x600160015d61001760008160108239f360005c60005560015c600155600160025d60025c600255"
+            ],
+            "sender": "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "secretKey": "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8"
+        },
+        "post": {
+            "Cancun": [
+                {
+                    "hash": "0x631b5cd97522a33e7582bed2cc35a6891153123a353d3e2993ed8709d879ee7e",
+                    "logs": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes": "0xf887800a830f424094100000000000000000000000000000000000100080a7600160015d61001760008160108239f360005c60005560015c600155600160025d60025c60025525a06205518772b4740573ab39f4539cf2fd631304e022a70b3c335db8283bd3fb86a07f12e2380705059b266e53ce0571ee56a21045af9368e3338577c44af8167cde",
+                    "indexes": {
+                        "data": 0,
+                        "gas": 0,
+                        "value": 0
+                    },
+                    "state": {
+                        "0x1000000000000000000000000000000000001000": {
+                            "nonce": "0x02",
+                            "balance": "0x00",
+                            "code": "0x61010060005d61020060015d61030060025d3660006000376000600060006000600063deadbeef3660006000f55af160045560005c60005560015c60015560025c600255",
+                            "storage": {
+                                "0x04": "0x01",
+                                "0x00": "0x0100",
+                                "0x01": "0x0200",
+                                "0x02": "0x0300"
+                            }
+                        },
+                        "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                            "nonce": "0x01",
+                            "balance": "0x3635c9adc5de8258c0",
+                            "code": "0x",
+                            "storage": {}
+                        },
+                        "0xf6f9c1bb10029fefc681e81b293d0718467f32c3": {
+                            "nonce": "0x01",
+                            "balance": "0x00",
+                            "code": "0x60005c60005560015c600155600160025d60025c600255",
+                            "storage": {
+                                "0x01": "0x01",
+                                "0x02": "0x01"
+                            }
+                        },
+                        "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba": {
+                            "nonce": "0x00",
+                            "balance": "0x08e560",
+                            "code": "0x",
+                            "storage": {}
+                        }
+                    }
+                }
+            ]
+        },
+        "config": {
+            "blobSchedule": {
+                "Cancun": {
+                    "target": "0x03",
+                    "max": "0x06",
+                    "baseFeeUpdateFraction": "0x32f0ed"
+                }
+            },
+            "chainid": "0x01"
+        },
+        "_info": {
+            "hash": "0xb9508c08f8d92fb44527ac616d5bc6aefa4bf43b4c0c55f6c5cf3c024ae723f3",
+            "comment": "`execution-spec-tests` generated test",
+            "filling-transition-tool": "ethereum-spec-evm-resolver 0.0.5",
+            "description": "Test class documentation:\n\n    Test transient storage in contract creation contexts.\n    - TSTORE/TLOAD in initcode should not be able to access the creator's transient storage.\n    - TSTORE/TLOAD in initcode should be able to access the created contract's transient\n        storage.\n    - TSTORE/TLOAD in creator contract should be able to use its own transient storage.\n    \n\nTest transient storage in contract creation contexts.",
+            "url": "https://github.com/ethereum/execution-spec-tests/blob/20770a694f440aeb4ea3ec86a3b9bc04d40146a3/tests/cancun/eip1153_tstore/test_tstorage_create_contexts.py#L196",
+            "fixture-format": "state_test",
+            "reference-spec": "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1153.md",
+            "reference-spec-version": "1eb863b534a5a3e19e9c196ab2a7f3db4bb9da17",
+            "eels-resolution": {
+                "git-url": "https://github.com/marioevz/execution-specs.git",
+                "branch": "forks/bpo1",
+                "commit": "3387e5f4aedfe99becfdc39b444d6371e25e0924"
+            }
+        }
+    },
+    "tests/cancun/eip1153_tstore/test_tstorage_create_contexts.py::TestTransientStorageInContractCreation::test_contract_creation[fork_Cancun-state_test-across_constructor_and_deployed_code_v0-create]": {
+        "env": {
+            "currentCoinbase": "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentGasLimit": "0x055d4a80",
+            "currentNumber": "0x01",
+            "currentTimestamp": "0x03e8",
+            "currentRandom": "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentDifficulty": "0x00",
+            "currentBaseFee": "0x07",
+            "currentExcessBlobGas": "0x00"
+        },
+        "pre": {
+            "0x1000000000000000000000000000000000001000": {
+                "nonce": "0x01",
+                "balance": "0x00",
+                "code": "0x61010060005d61020060015d61030060025d366000600037600060006000600060003660006000f05af160045560005c60005560015c60015560025c600255",
+                "storage": {}
+            },
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                "nonce": "0x00",
+                "balance": "0x3635c9adc5dea00000",
+                "code": "0x",
+                "storage": {}
+            }
+        },
+        "transaction": {
+            "nonce": "0x00",
+            "gasPrice": "0x0a",
+            "gasLimit": [
+                "0x0f4240"
+            ],
+            "to": "0x1000000000000000000000000000000000001000",
+            "value": [
+                "0x00"
+            ],
+            "data": [
+                "0x600160015d61001760008160108239f360005c60005560015c600155600160025d60025c600255"
+            ],
+            "sender": "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "secretKey": "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8"
+        },
+        "post": {
+            "Cancun": [
+                {
+                    "hash": "0x21b8ec8936fbf321b64b304b8c6424f28edcbd4fbc15c16ef75b57395a1c31c2",
+                    "logs": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes": "0xf887800a830f424094100000000000000000000000000000000000100080a7600160015d61001760008160108239f360005c60005560015c600155600160025d60025c60025525a06205518772b4740573ab39f4539cf2fd631304e022a70b3c335db8283bd3fb86a07f12e2380705059b266e53ce0571ee56a21045af9368e3338577c44af8167cde",
+                    "indexes": {
+                        "data": 0,
+                        "gas": 0,
+                        "value": 0
+                    },
+                    "state": {
+                        "0x1000000000000000000000000000000000001000": {
+                            "nonce": "0x02",
+                            "balance": "0x00",
+                            "code": "0x61010060005d61020060015d61030060025d366000600037600060006000600060003660006000f05af160045560005c60005560015c60015560025c600255",
+                            "storage": {
+                                "0x04": "0x01",
+                                "0x00": "0x0100",
+                                "0x01": "0x0200",
+                                "0x02": "0x0300"
+                            }
+                        },
+                        "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                            "nonce": "0x01",
+                            "balance": "0x3635c9adc5de825956",
+                            "code": "0x",
+                            "storage": {}
+                        },
+                        "0x79ab208d79e75ceec315d72eb82ded746a805449": {
+                            "nonce": "0x01",
+                            "balance": "0x00",
+                            "code": "0x60005c60005560015c600155600160025d60025c600255",
+                            "storage": {
+                                "0x01": "0x01",
+                                "0x02": "0x01"
+                            }
+                        },
+                        "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba": {
+                            "nonce": "0x00",
+                            "balance": "0x08e533",
+                            "code": "0x",
+                            "storage": {}
+                        }
+                    }
+                }
+            ]
+        },
+        "config": {
+            "blobSchedule": {
+                "Cancun": {
+                    "target": "0x03",
+                    "max": "0x06",
+                    "baseFeeUpdateFraction": "0x32f0ed"
+                }
+            },
+            "chainid": "0x01"
+        },
+        "_info": {
+            "hash": "0x95d1c52554fac2f0cd3cc9045ccbf8518ef01dfec1db4a0358da9550389107ea",
+            "comment": "`execution-spec-tests` generated test",
+            "filling-transition-tool": "ethereum-spec-evm-resolver 0.0.5",
+            "description": "Test class documentation:\n\n    Test transient storage in contract creation contexts.\n    - TSTORE/TLOAD in initcode should not be able to access the creator's transient storage.\n    - TSTORE/TLOAD in initcode should be able to access the created contract's transient\n        storage.\n    - TSTORE/TLOAD in creator contract should be able to use its own transient storage.\n    \n\nTest transient storage in contract creation contexts.",
+            "url": "https://github.com/ethereum/execution-spec-tests/blob/20770a694f440aeb4ea3ec86a3b9bc04d40146a3/tests/cancun/eip1153_tstore/test_tstorage_create_contexts.py#L196",
+            "fixture-format": "state_test",
+            "reference-spec": "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1153.md",
+            "reference-spec-version": "1eb863b534a5a3e19e9c196ab2a7f3db4bb9da17",
+            "eels-resolution": {
+                "git-url": "https://github.com/marioevz/execution-specs.git",
+                "branch": "forks/bpo1",
+                "commit": "3387e5f4aedfe99becfdc39b444d6371e25e0924"
+            }
+        }
+    },
+    "tests/cancun/eip1153_tstore/test_tstorage_create_contexts.py::TestTransientStorageInContractCreation::test_contract_creation[fork_Cancun-state_test-across_constructor_and_deployed_code_v1-create2]": {
+        "env": {
+            "currentCoinbase": "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentGasLimit": "0x055d4a80",
+            "currentNumber": "0x01",
+            "currentTimestamp": "0x03e8",
+            "currentRandom": "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentDifficulty": "0x00",
+            "currentBaseFee": "0x07",
+            "currentExcessBlobGas": "0x00"
+        },
+        "pre": {
+            "0x1000000000000000000000000000000000001000": {
+                "nonce": "0x01",
+                "balance": "0x00",
+                "code": "0x61010060005d61020060015d61030060025d3660006000376000600060006000600063deadbeef3660006000f55af160045560005c60005560015c60015560025c600255",
+                "storage": {}
+            },
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                "nonce": "0x00",
+                "balance": "0x3635c9adc5dea00000",
+                "code": "0x",
+                "storage": {}
+            }
+        },
+        "transaction": {
+            "nonce": "0x00",
+            "gasPrice": "0x0a",
+            "gasLimit": [
+                "0x0f4240"
+            ],
+            "to": "0x1000000000000000000000000000000000001000",
+            "value": [
+                "0x00"
+            ],
+            "data": [
+                "0x60005c600055600160015d60015c600155610017600081601c8239f360005c60025560015c600355600160025d60025c600455"
+            ],
+            "sender": "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "secretKey": "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8"
+        },
+        "post": {
+            "Cancun": [
+                {
+                    "hash": "0x14c12fc2f31d4a3f287b420b6712e0be76ddb335d6b3c256b21d3a624c4315e4",
+                    "logs": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes": "0xf893800a830f424094100000000000000000000000000000000000100080b360005c600055600160015d60015c600155610017600081601c8239f360005c60025560015c600355600160025d60025c60045526a047874ddb422aed0d07ca45014b286c1070590837a2252adc4315ffe65537373aa02479e282ea3d348ebaf29d6deab10037495339a9c1fb4ec14a79ba8d70990b74",
+                    "indexes": {
+                        "data": 0,
+                        "gas": 0,
+                        "value": 0
+                    },
+                    "state": {
+                        "0x1000000000000000000000000000000000001000": {
+                            "nonce": "0x02",
+                            "balance": "0x00",
+                            "code": "0x61010060005d61020060015d61030060025d3660006000376000600060006000600063deadbeef3660006000f55af160045560005c60005560015c60015560025c600255",
+                            "storage": {
+                                "0x04": "0x01",
+                                "0x00": "0x0100",
+                                "0x01": "0x0200",
+                                "0x02": "0x0300"
+                            }
+                        },
+                        "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                            "nonce": "0x01",
+                            "balance": "0x3635c9adc5de7e9438",
+                            "code": "0x",
+                            "storage": {}
+                        },
+                        "0x7aa384ecc6fc186c9f14fcae73ed644ae8c0da76": {
+                            "nonce": "0x01",
+                            "balance": "0x00",
+                            "code": "0x60005c60025560015c600355600160025d60025c600455",
+                            "storage": {
+                                "0x01": "0x01",
+                                "0x03": "0x01",
+                                "0x04": "0x01"
+                            }
+                        },
+                        "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba": {
+                            "nonce": "0x00",
+                            "balance": "0x0a06bc",
+                            "code": "0x",
+                            "storage": {}
+                        }
+                    }
+                }
+            ]
+        },
+        "config": {
+            "blobSchedule": {
+                "Cancun": {
+                    "target": "0x03",
+                    "max": "0x06",
+                    "baseFeeUpdateFraction": "0x32f0ed"
+                }
+            },
+            "chainid": "0x01"
+        },
+        "_info": {
+            "hash": "0xbbbce35e7378072ea189a8a1751caaec22e0f3b91221bf036d284cf98d2e5551",
+            "comment": "`execution-spec-tests` generated test",
+            "filling-transition-tool": "ethereum-spec-evm-resolver 0.0.5",
+            "description": "Test class documentation:\n\n    Test transient storage in contract creation contexts.\n    - TSTORE/TLOAD in initcode should not be able to access the creator's transient storage.\n    - TSTORE/TLOAD in initcode should be able to access the created contract's transient\n        storage.\n    - TSTORE/TLOAD in creator contract should be able to use its own transient storage.\n    \n\nTest transient storage in contract creation contexts.",
+            "url": "https://github.com/ethereum/execution-spec-tests/blob/20770a694f440aeb4ea3ec86a3b9bc04d40146a3/tests/cancun/eip1153_tstore/test_tstorage_create_contexts.py#L196",
+            "fixture-format": "state_test",
+            "reference-spec": "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1153.md",
+            "reference-spec-version": "1eb863b534a5a3e19e9c196ab2a7f3db4bb9da17",
+            "eels-resolution": {
+                "git-url": "https://github.com/marioevz/execution-specs.git",
+                "branch": "forks/bpo1",
+                "commit": "3387e5f4aedfe99becfdc39b444d6371e25e0924"
+            }
+        }
+    },
+    "tests/cancun/eip1153_tstore/test_tstorage_create_contexts.py::TestTransientStorageInContractCreation::test_contract_creation[fork_Cancun-state_test-across_constructor_and_deployed_code_v1-create]": {
+        "env": {
+            "currentCoinbase": "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentGasLimit": "0x055d4a80",
+            "currentNumber": "0x01",
+            "currentTimestamp": "0x03e8",
+            "currentRandom": "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentDifficulty": "0x00",
+            "currentBaseFee": "0x07",
+            "currentExcessBlobGas": "0x00"
+        },
+        "pre": {
+            "0x1000000000000000000000000000000000001000": {
+                "nonce": "0x01",
+                "balance": "0x00",
+                "code": "0x61010060005d61020060015d61030060025d366000600037600060006000600060003660006000f05af160045560005c60005560015c60015560025c600255",
+                "storage": {}
+            },
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                "nonce": "0x00",
+                "balance": "0x3635c9adc5dea00000",
+                "code": "0x",
+                "storage": {}
+            }
+        },
+        "transaction": {
+            "nonce": "0x00",
+            "gasPrice": "0x0a",
+            "gasLimit": [
+                "0x0f4240"
+            ],
+            "to": "0x1000000000000000000000000000000000001000",
+            "value": [
+                "0x00"
+            ],
+            "data": [
+                "0x60005c600055600160015d60015c600155610017600081601c8239f360005c60025560015c600355600160025d60025c600455"
+            ],
+            "sender": "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "secretKey": "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8"
+        },
+        "post": {
+            "Cancun": [
+                {
+                    "hash": "0x27355093cdb6f3e6c0aab21b03db2bf2774328c150bc151cdb4b229634f8fff5",
+                    "logs": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes": "0xf893800a830f424094100000000000000000000000000000000000100080b360005c600055600160015d60015c600155610017600081601c8239f360005c60025560015c600355600160025d60025c60045526a047874ddb422aed0d07ca45014b286c1070590837a2252adc4315ffe65537373aa02479e282ea3d348ebaf29d6deab10037495339a9c1fb4ec14a79ba8d70990b74",
+                    "indexes": {
+                        "data": 0,
+                        "gas": 0,
+                        "value": 0
+                    },
+                    "state": {
+                        "0x1000000000000000000000000000000000001000": {
+                            "nonce": "0x02",
+                            "balance": "0x00",
+                            "code": "0x61010060005d61020060015d61030060025d366000600037600060006000600060003660006000f05af160045560005c60005560015c60015560025c600255",
+                            "storage": {
+                                "0x04": "0x01",
+                                "0x00": "0x0100",
+                                "0x01": "0x0200",
+                                "0x02": "0x0300"
+                            }
+                        },
+                        "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                            "nonce": "0x01",
+                            "balance": "0x3635c9adc5de7e94ce",
+                            "code": "0x",
+                            "storage": {}
+                        },
+                        "0x79ab208d79e75ceec315d72eb82ded746a805449": {
+                            "nonce": "0x01",
+                            "balance": "0x00",
+                            "code": "0x60005c60025560015c600355600160025d60025c600455",
+                            "storage": {
+                                "0x01": "0x01",
+                                "0x03": "0x01",
+                                "0x04": "0x01"
+                            }
+                        },
+                        "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba": {
+                            "nonce": "0x00",
+                            "balance": "0x0a068f",
+                            "code": "0x",
+                            "storage": {}
+                        }
+                    }
+                }
+            ]
+        },
+        "config": {
+            "blobSchedule": {
+                "Cancun": {
+                    "target": "0x03",
+                    "max": "0x06",
+                    "baseFeeUpdateFraction": "0x32f0ed"
+                }
+            },
+            "chainid": "0x01"
+        },
+        "_info": {
+            "hash": "0x03c774a1bbee8fd1a6f468d5ed9eb7b20f0366d71d6fb15f245759afb5ed1aac",
+            "comment": "`execution-spec-tests` generated test",
+            "filling-transition-tool": "ethereum-spec-evm-resolver 0.0.5",
+            "description": "Test class documentation:\n\n    Test transient storage in contract creation contexts.\n    - TSTORE/TLOAD in initcode should not be able to access the creator's transient storage.\n    - TSTORE/TLOAD in initcode should be able to access the created contract's transient\n        storage.\n    - TSTORE/TLOAD in creator contract should be able to use its own transient storage.\n    \n\nTest transient storage in contract creation contexts.",
+            "url": "https://github.com/ethereum/execution-spec-tests/blob/20770a694f440aeb4ea3ec86a3b9bc04d40146a3/tests/cancun/eip1153_tstore/test_tstorage_create_contexts.py#L196",
+            "fixture-format": "state_test",
+            "reference-spec": "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1153.md",
+            "reference-spec-version": "1eb863b534a5a3e19e9c196ab2a7f3db4bb9da17",
+            "eels-resolution": {
+                "git-url": "https://github.com/marioevz/execution-specs.git",
+                "branch": "forks/bpo1",
+                "commit": "3387e5f4aedfe99becfdc39b444d6371e25e0924"
+            }
+        }
+    },
+    "tests/cancun/eip1153_tstore/test_tstorage_create_contexts.py::TestTransientStorageInContractCreation::test_contract_creation[fork_Cancun-state_test-in_constructor_and_deployed_code-create2]": {
+        "env": {
+            "currentCoinbase": "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentGasLimit": "0x055d4a80",
+            "currentNumber": "0x01",
+            "currentTimestamp": "0x03e8",
+            "currentRandom": "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentDifficulty": "0x00",
+            "currentBaseFee": "0x07",
+            "currentExcessBlobGas": "0x00"
+        },
+        "pre": {
+            "0x1000000000000000000000000000000000001000": {
+                "nonce": "0x01",
+                "balance": "0x00",
+                "code": "0x61010060005d61020060015d61030060025d3660006000376000600060006000600063deadbeef3660006000f55af160045560005c60005560015c60015560025c600255",
+                "storage": {}
+            },
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                "nonce": "0x00",
+                "balance": "0x3635c9adc5dea00000",
+                "code": "0x",
+                "storage": {}
+            }
+        },
+        "transaction": {
+            "nonce": "0x00",
+            "gasPrice": "0x0a",
+            "gasLimit": [
+                "0x0f4240"
+            ],
+            "to": "0x1000000000000000000000000000000000001000",
+            "value": [
+                "0x00"
+            ],
+            "data": [
+                "0x60005c60005561001160008160118239f360005c600155600160015d60015c600255"
+            ],
+            "sender": "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "secretKey": "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8"
+        },
+        "post": {
+            "Cancun": [
+                {
+                    "hash": "0x0d8bbecf2481569d544d384dc03f0f201dd97f02fe72deea9d31e535897d0c2c",
+                    "logs": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes": "0xf882800a830f424094100000000000000000000000000000000000100080a260005c60005561001160008160118239f360005c600155600160015d60015c60025525a097911626d374ea348ddeece7d883df5c3257745a8db58254d45c6f31cf6e3a81a0030a085ad7cfba996eda67e652b3969fb986a2930b607cc007000d7b8d5fd8e1",
+                    "indexes": {
+                        "data": 0,
+                        "gas": 0,
+                        "value": 0
+                    },
+                    "state": {
+                        "0x1000000000000000000000000000000000001000": {
+                            "nonce": "0x02",
+                            "balance": "0x00",
+                            "code": "0x61010060005d61020060015d61030060025d3660006000376000600060006000600063deadbeef3660006000f55af160045560005c60005560015c60015560025c600255",
+                            "storage": {
+                                "0x04": "0x01",
+                                "0x00": "0x0100",
+                                "0x01": "0x0200",
+                                "0x02": "0x0300"
+                            }
+                        },
+                        "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                            "nonce": "0x01",
+                            "balance": "0x3635c9adc5de8598b4",
+                            "code": "0x",
+                            "storage": {}
+                        },
+                        "0x1ed36ef277b18c89991e93ab849a18478463805c": {
+                            "nonce": "0x01",
+                            "balance": "0x00",
+                            "code": "0x60005c600155600160015d60015c600255",
+                            "storage": {
+                                "0x02": "0x01"
+                            }
+                        },
+                        "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba": {
+                            "nonce": "0x00",
+                            "balance": "0x07ebca",
+                            "code": "0x",
+                            "storage": {}
+                        }
+                    }
+                }
+            ]
+        },
+        "config": {
+            "blobSchedule": {
+                "Cancun": {
+                    "target": "0x03",
+                    "max": "0x06",
+                    "baseFeeUpdateFraction": "0x32f0ed"
+                }
+            },
+            "chainid": "0x01"
+        },
+        "_info": {
+            "hash": "0xa2582ce3fa9576588c718cc760b9c33a4e21f3a6d655ea4e7899116e5653da26",
+            "comment": "`execution-spec-tests` generated test",
+            "filling-transition-tool": "ethereum-spec-evm-resolver 0.0.5",
+            "description": "Test class documentation:\n\n    Test transient storage in contract creation contexts.\n    - TSTORE/TLOAD in initcode should not be able to access the creator's transient storage.\n    - TSTORE/TLOAD in initcode should be able to access the created contract's transient\n        storage.\n    - TSTORE/TLOAD in creator contract should be able to use its own transient storage.\n    \n\nTest transient storage in contract creation contexts.",
+            "url": "https://github.com/ethereum/execution-spec-tests/blob/20770a694f440aeb4ea3ec86a3b9bc04d40146a3/tests/cancun/eip1153_tstore/test_tstorage_create_contexts.py#L196",
+            "fixture-format": "state_test",
+            "reference-spec": "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1153.md",
+            "reference-spec-version": "1eb863b534a5a3e19e9c196ab2a7f3db4bb9da17",
+            "eels-resolution": {
+                "git-url": "https://github.com/marioevz/execution-specs.git",
+                "branch": "forks/bpo1",
+                "commit": "3387e5f4aedfe99becfdc39b444d6371e25e0924"
+            }
+        }
+    },
+    "tests/cancun/eip1153_tstore/test_tstorage_create_contexts.py::TestTransientStorageInContractCreation::test_contract_creation[fork_Cancun-state_test-in_constructor_and_deployed_code-create]": {
+        "env": {
+            "currentCoinbase": "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentGasLimit": "0x055d4a80",
+            "currentNumber": "0x01",
+            "currentTimestamp": "0x03e8",
+            "currentRandom": "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentDifficulty": "0x00",
+            "currentBaseFee": "0x07",
+            "currentExcessBlobGas": "0x00"
+        },
+        "pre": {
+            "0x1000000000000000000000000000000000001000": {
+                "nonce": "0x01",
+                "balance": "0x00",
+                "code": "0x61010060005d61020060015d61030060025d366000600037600060006000600060003660006000f05af160045560005c60005560015c60015560025c600255",
+                "storage": {}
+            },
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                "nonce": "0x00",
+                "balance": "0x3635c9adc5dea00000",
+                "code": "0x",
+                "storage": {}
+            }
+        },
+        "transaction": {
+            "nonce": "0x00",
+            "gasPrice": "0x0a",
+            "gasLimit": [
+                "0x0f4240"
+            ],
+            "to": "0x1000000000000000000000000000000000001000",
+            "value": [
+                "0x00"
+            ],
+            "data": [
+                "0x60005c60005561001160008160118239f360005c600155600160015d60015c600255"
+            ],
+            "sender": "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "secretKey": "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8"
+        },
+        "post": {
+            "Cancun": [
+                {
+                    "hash": "0x616408b8b5eb5a1f22182f42b0189af5c6cd5fc35d4f5b3074000d4ba4b7f113",
+                    "logs": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes": "0xf882800a830f424094100000000000000000000000000000000000100080a260005c60005561001160008160118239f360005c600155600160015d60015c60025525a097911626d374ea348ddeece7d883df5c3257745a8db58254d45c6f31cf6e3a81a0030a085ad7cfba996eda67e652b3969fb986a2930b607cc007000d7b8d5fd8e1",
+                    "indexes": {
+                        "data": 0,
+                        "gas": 0,
+                        "value": 0
+                    },
+                    "state": {
+                        "0x1000000000000000000000000000000000001000": {
+                            "nonce": "0x02",
+                            "balance": "0x00",
+                            "code": "0x61010060005d61020060015d61030060025d366000600037600060006000600060003660006000f05af160045560005c60005560015c60015560025c600255",
+                            "storage": {
+                                "0x04": "0x01",
+                                "0x00": "0x0100",
+                                "0x01": "0x0200",
+                                "0x02": "0x0300"
+                            }
+                        },
+                        "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                            "nonce": "0x01",
+                            "balance": "0x3635c9adc5de85994a",
+                            "code": "0x",
+                            "storage": {}
+                        },
+                        "0x79ab208d79e75ceec315d72eb82ded746a805449": {
+                            "nonce": "0x01",
+                            "balance": "0x00",
+                            "code": "0x60005c600155600160015d60015c600255",
+                            "storage": {
+                                "0x02": "0x01"
+                            }
+                        },
+                        "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba": {
+                            "nonce": "0x00",
+                            "balance": "0x07eb9d",
+                            "code": "0x",
+                            "storage": {}
+                        }
+                    }
+                }
+            ]
+        },
+        "config": {
+            "blobSchedule": {
+                "Cancun": {
+                    "target": "0x03",
+                    "max": "0x06",
+                    "baseFeeUpdateFraction": "0x32f0ed"
+                }
+            },
+            "chainid": "0x01"
+        },
+        "_info": {
+            "hash": "0x97d625d3eaaf2a0157376590f609f1f636b869bcafc9d44eb913a732eb0aa269",
+            "comment": "`execution-spec-tests` generated test",
+            "filling-transition-tool": "ethereum-spec-evm-resolver 0.0.5",
+            "description": "Test class documentation:\n\n    Test transient storage in contract creation contexts.\n    - TSTORE/TLOAD in initcode should not be able to access the creator's transient storage.\n    - TSTORE/TLOAD in initcode should be able to access the created contract's transient\n        storage.\n    - TSTORE/TLOAD in creator contract should be able to use its own transient storage.\n    \n\nTest transient storage in contract creation contexts.",
+            "url": "https://github.com/ethereum/execution-spec-tests/blob/20770a694f440aeb4ea3ec86a3b9bc04d40146a3/tests/cancun/eip1153_tstore/test_tstorage_create_contexts.py#L196",
+            "fixture-format": "state_test",
+            "reference-spec": "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1153.md",
+            "reference-spec-version": "1eb863b534a5a3e19e9c196ab2a7f3db4bb9da17",
+            "eels-resolution": {
+                "git-url": "https://github.com/marioevz/execution-specs.git",
+                "branch": "forks/bpo1",
+                "commit": "3387e5f4aedfe99becfdc39b444d6371e25e0924"
+            }
+        }
+    },
+    "tests/cancun/eip1153_tstore/test_tstorage_create_contexts.py::TestTransientStorageInContractCreation::test_contract_creation[fork_Cancun-state_test-no_constructor_code-create2]": {
+        "env": {
+            "currentCoinbase": "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentGasLimit": "0x055d4a80",
+            "currentNumber": "0x01",
+            "currentTimestamp": "0x03e8",
+            "currentRandom": "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentDifficulty": "0x00",
+            "currentBaseFee": "0x07",
+            "currentExcessBlobGas": "0x00"
+        },
+        "pre": {
+            "0x1000000000000000000000000000000000001000": {
+                "nonce": "0x01",
+                "balance": "0x00",
+                "code": "0x61010060005d61020060015d61030060025d3660006000376000600060006000600063deadbeef3660006000f55af160045560005c60005560015c60015560025c600255",
+                "storage": {}
+            },
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                "nonce": "0x00",
+                "balance": "0x3635c9adc5dea00000",
+                "code": "0x",
+                "storage": {}
+            }
+        },
+        "transaction": {
+            "nonce": "0x00",
+            "gasPrice": "0x0a",
+            "gasLimit": [
+                "0x0f4240"
+            ],
+            "to": "0x1000000000000000000000000000000000001000",
+            "value": [
+                "0x00"
+            ],
+            "data": [
+                "0x610011600081600b8239f360005c600055600160005d60005c600155"
+            ],
+            "sender": "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "secretKey": "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8"
+        },
+        "post": {
+            "Cancun": [
+                {
+                    "hash": "0xde68ee6dd1b5227cbb0afafb96b485706a79252a225c2b2e2c6af6eb552419f4",
+                    "logs": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes": "0xf87c800a830f4240941000000000000000000000000000000000001000809c610011600081600b8239f360005c600055600160005d60005c60015525a02a2b6ac1c73bb2abfc900ee8e1e67829685672a8639f4a4f6f109ad608802d1ea0615c7b9295f15652d5dc0fa0e08cf8609e960877b75abafdb1d277c1e36193a1",
+                    "indexes": {
+                        "data": 0,
+                        "gas": 0,
+                        "value": 0
+                    },
+                    "state": {
+                        "0x1000000000000000000000000000000000001000": {
+                            "nonce": "0x02",
+                            "balance": "0x00",
+                            "code": "0x61010060005d61020060015d61030060025d3660006000376000600060006000600063deadbeef3660006000f55af160045560005c60005560015c60015560025c600255",
+                            "storage": {
+                                "0x04": "0x01",
+                                "0x00": "0x0100",
+                                "0x01": "0x0200",
+                                "0x02": "0x0300"
+                            }
+                        },
+                        "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                            "nonce": "0x01",
+                            "balance": "0x3635c9adc5de85f78c",
+                            "code": "0x",
+                            "storage": {}
+                        },
+                        "0xc3b7551c512ae2272d8de90e14aaf457d0d62d0b": {
+                            "nonce": "0x01",
+                            "balance": "0x00",
+                            "code": "0x60005c600055600160005d60005c600155",
+                            "storage": {
+                                "0x01": "0x01"
+                            }
+                        },
+                        "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba": {
+                            "nonce": "0x00",
+                            "balance": "0x07cf56",
+                            "code": "0x",
+                            "storage": {}
+                        }
+                    }
+                }
+            ]
+        },
+        "config": {
+            "blobSchedule": {
+                "Cancun": {
+                    "target": "0x03",
+                    "max": "0x06",
+                    "baseFeeUpdateFraction": "0x32f0ed"
+                }
+            },
+            "chainid": "0x01"
+        },
+        "_info": {
+            "hash": "0xb26c8ca00c698aa1ac1e5c36ccaed73751dc4cd327edac6da7adfa89df29a8c4",
+            "comment": "`execution-spec-tests` generated test",
+            "filling-transition-tool": "ethereum-spec-evm-resolver 0.0.5",
+            "description": "Test class documentation:\n\n    Test transient storage in contract creation contexts.\n    - TSTORE/TLOAD in initcode should not be able to access the creator's transient storage.\n    - TSTORE/TLOAD in initcode should be able to access the created contract's transient\n        storage.\n    - TSTORE/TLOAD in creator contract should be able to use its own transient storage.\n    \n\nTest transient storage in contract creation contexts.",
+            "url": "https://github.com/ethereum/execution-spec-tests/blob/20770a694f440aeb4ea3ec86a3b9bc04d40146a3/tests/cancun/eip1153_tstore/test_tstorage_create_contexts.py#L196",
+            "fixture-format": "state_test",
+            "reference-spec": "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1153.md",
+            "reference-spec-version": "1eb863b534a5a3e19e9c196ab2a7f3db4bb9da17",
+            "eels-resolution": {
+                "git-url": "https://github.com/marioevz/execution-specs.git",
+                "branch": "forks/bpo1",
+                "commit": "3387e5f4aedfe99becfdc39b444d6371e25e0924"
+            }
+        }
+    },
+    "tests/cancun/eip1153_tstore/test_tstorage_create_contexts.py::TestTransientStorageInContractCreation::test_contract_creation[fork_Cancun-state_test-no_constructor_code-create]": {
+        "env": {
+            "currentCoinbase": "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentGasLimit": "0x055d4a80",
+            "currentNumber": "0x01",
+            "currentTimestamp": "0x03e8",
+            "currentRandom": "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentDifficulty": "0x00",
+            "currentBaseFee": "0x07",
+            "currentExcessBlobGas": "0x00"
+        },
+        "pre": {
+            "0x1000000000000000000000000000000000001000": {
+                "nonce": "0x01",
+                "balance": "0x00",
+                "code": "0x61010060005d61020060015d61030060025d366000600037600060006000600060003660006000f05af160045560005c60005560015c60015560025c600255",
+                "storage": {}
+            },
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                "nonce": "0x00",
+                "balance": "0x3635c9adc5dea00000",
+                "code": "0x",
+                "storage": {}
+            }
+        },
+        "transaction": {
+            "nonce": "0x00",
+            "gasPrice": "0x0a",
+            "gasLimit": [
+                "0x0f4240"
+            ],
+            "to": "0x1000000000000000000000000000000000001000",
+            "value": [
+                "0x00"
+            ],
+            "data": [
+                "0x610011600081600b8239f360005c600055600160005d60005c600155"
+            ],
+            "sender": "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "secretKey": "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8"
+        },
+        "post": {
+            "Cancun": [
+                {
+                    "hash": "0x4c3ea2425c65350fa3a2c55ada992da00da3cc69de71aeb83082a998e90e937e",
+                    "logs": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes": "0xf87c800a830f4240941000000000000000000000000000000000001000809c610011600081600b8239f360005c600055600160005d60005c60015525a02a2b6ac1c73bb2abfc900ee8e1e67829685672a8639f4a4f6f109ad608802d1ea0615c7b9295f15652d5dc0fa0e08cf8609e960877b75abafdb1d277c1e36193a1",
+                    "indexes": {
+                        "data": 0,
+                        "gas": 0,
+                        "value": 0
+                    },
+                    "state": {
+                        "0x1000000000000000000000000000000000001000": {
+                            "nonce": "0x02",
+                            "balance": "0x00",
+                            "code": "0x61010060005d61020060015d61030060025d366000600037600060006000600060003660006000f05af160045560005c60005560015c60015560025c600255",
+                            "storage": {
+                                "0x04": "0x01",
+                                "0x00": "0x0100",
+                                "0x01": "0x0200",
+                                "0x02": "0x0300"
+                            }
+                        },
+                        "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                            "nonce": "0x01",
+                            "balance": "0x3635c9adc5de85f7e6",
+                            "code": "0x",
+                            "storage": {}
+                        },
+                        "0x79ab208d79e75ceec315d72eb82ded746a805449": {
+                            "nonce": "0x01",
+                            "balance": "0x00",
+                            "code": "0x60005c600055600160005d60005c600155",
+                            "storage": {
+                                "0x01": "0x01"
+                            }
+                        },
+                        "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba": {
+                            "nonce": "0x00",
+                            "balance": "0x07cf3b",
+                            "code": "0x",
+                            "storage": {}
+                        }
+                    }
+                }
+            ]
+        },
+        "config": {
+            "blobSchedule": {
+                "Cancun": {
+                    "target": "0x03",
+                    "max": "0x06",
+                    "baseFeeUpdateFraction": "0x32f0ed"
+                }
+            },
+            "chainid": "0x01"
+        },
+        "_info": {
+            "hash": "0xbd6dda5a6077771bff473bd1121eb7d712c91fea455a17d19666d62d2d14ce14",
+            "comment": "`execution-spec-tests` generated test",
+            "filling-transition-tool": "ethereum-spec-evm-resolver 0.0.5",
+            "description": "Test class documentation:\n\n    Test transient storage in contract creation contexts.\n    - TSTORE/TLOAD in initcode should not be able to access the creator's transient storage.\n    - TSTORE/TLOAD in initcode should be able to access the created contract's transient\n        storage.\n    - TSTORE/TLOAD in creator contract should be able to use its own transient storage.\n    \n\nTest transient storage in contract creation contexts.",
+            "url": "https://github.com/ethereum/execution-spec-tests/blob/20770a694f440aeb4ea3ec86a3b9bc04d40146a3/tests/cancun/eip1153_tstore/test_tstorage_create_contexts.py#L196",
+            "fixture-format": "state_test",
+            "reference-spec": "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1153.md",
+            "reference-spec-version": "1eb863b534a5a3e19e9c196ab2a7f3db4bb9da17",
+            "eels-resolution": {
+                "git-url": "https://github.com/marioevz/execution-specs.git",
+                "branch": "forks/bpo1",
+                "commit": "3387e5f4aedfe99becfdc39b444d6371e25e0924"
+            }
+        }
+    },
+    "tests/cancun/eip1153_tstore/test_tstorage_create_contexts.py::TestTransientStorageInContractCreation::test_contract_creation[fork_Cancun-state_test-only_constructor_code-create2]": {
+        "env": {
+            "currentCoinbase": "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentGasLimit": "0x055d4a80",
+            "currentNumber": "0x01",
+            "currentTimestamp": "0x03e8",
+            "currentRandom": "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentDifficulty": "0x00",
+            "currentBaseFee": "0x07",
+            "currentExcessBlobGas": "0x00"
+        },
+        "pre": {
+            "0x1000000000000000000000000000000000001000": {
+                "nonce": "0x01",
+                "balance": "0x00",
+                "code": "0x61010060005d61020060015d61030060025d3660006000376000600060006000600063deadbeef3660006000f55af160045560005c60005560015c60015560025c600255",
+                "storage": {}
+            },
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                "nonce": "0x00",
+                "balance": "0x3635c9adc5dea00000",
+                "code": "0x",
+                "storage": {}
+            }
+        },
+        "transaction": {
+            "nonce": "0x00",
+            "gasPrice": "0x0a",
+            "gasLimit": [
+                "0x0f4240"
+            ],
+            "to": "0x1000000000000000000000000000000000001000",
+            "value": [
+                "0x00"
+            ],
+            "data": [
+                "0x60005c600055600160005d60005c600155610000600081601c8239f3"
+            ],
+            "sender": "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "secretKey": "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8"
+        },
+        "post": {
+            "Cancun": [
+                {
+                    "hash": "0xf7a929caf56ccbe7730e30773216a1887d3c0979d0782ef7ffca5b720486bff4",
+                    "logs": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes": "0xf87c800a830f4240941000000000000000000000000000000000001000809c60005c600055600160005d60005c600155610000600081601c8239f325a0e8a8f3a6e28bc5fae93e859e0fa6aad4b71a13dba89dc4807a5514ba2c2490e2a041dea8aa770c8fa3832698725780daddebd124316c507eef565807cbf476a719",
+                    "indexes": {
+                        "data": 0,
+                        "gas": 0,
+                        "value": 0
+                    },
+                    "state": {
+                        "0x1000000000000000000000000000000000001000": {
+                            "nonce": "0x02",
+                            "balance": "0x00",
+                            "code": "0x61010060005d61020060015d61030060025d3660006000376000600060006000600063deadbeef3660006000f55af160045560005c60005560015c60015560025c600255",
+                            "storage": {
+                                "0x04": "0x01",
+                                "0x00": "0x0100",
+                                "0x01": "0x0200",
+                                "0x02": "0x0300"
+                            }
+                        },
+                        "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                            "nonce": "0x01",
+                            "balance": "0x3635c9adc5de867d10",
+                            "code": "0x",
+                            "storage": {}
+                        },
+                        "0x65539dfb8889fdc8733dac9b3bc24ceb240a416b": {
+                            "nonce": "0x01",
+                            "balance": "0x00",
+                            "code": "0x",
+                            "storage": {
+                                "0x01": "0x01"
+                            }
+                        },
+                        "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba": {
+                            "nonce": "0x00",
+                            "balance": "0x07a748",
+                            "code": "0x",
+                            "storage": {}
+                        }
+                    }
+                }
+            ]
+        },
+        "config": {
+            "blobSchedule": {
+                "Cancun": {
+                    "target": "0x03",
+                    "max": "0x06",
+                    "baseFeeUpdateFraction": "0x32f0ed"
+                }
+            },
+            "chainid": "0x01"
+        },
+        "_info": {
+            "hash": "0x734033d4bddfe61504f36c4e754d8bfb9c475ac46be0f58184da9f65b50a0347",
+            "comment": "`execution-spec-tests` generated test",
+            "filling-transition-tool": "ethereum-spec-evm-resolver 0.0.5",
+            "description": "Test class documentation:\n\n    Test transient storage in contract creation contexts.\n    - TSTORE/TLOAD in initcode should not be able to access the creator's transient storage.\n    - TSTORE/TLOAD in initcode should be able to access the created contract's transient\n        storage.\n    - TSTORE/TLOAD in creator contract should be able to use its own transient storage.\n    \n\nTest transient storage in contract creation contexts.",
+            "url": "https://github.com/ethereum/execution-spec-tests/blob/20770a694f440aeb4ea3ec86a3b9bc04d40146a3/tests/cancun/eip1153_tstore/test_tstorage_create_contexts.py#L196",
+            "fixture-format": "state_test",
+            "reference-spec": "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1153.md",
+            "reference-spec-version": "1eb863b534a5a3e19e9c196ab2a7f3db4bb9da17",
+            "eels-resolution": {
+                "git-url": "https://github.com/marioevz/execution-specs.git",
+                "branch": "forks/bpo1",
+                "commit": "3387e5f4aedfe99becfdc39b444d6371e25e0924"
+            }
+        }
+    },
+    "tests/cancun/eip1153_tstore/test_tstorage_create_contexts.py::TestTransientStorageInContractCreation::test_contract_creation[fork_Cancun-state_test-only_constructor_code-create]": {
+        "env": {
+            "currentCoinbase": "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentGasLimit": "0x055d4a80",
+            "currentNumber": "0x01",
+            "currentTimestamp": "0x03e8",
+            "currentRandom": "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentDifficulty": "0x00",
+            "currentBaseFee": "0x07",
+            "currentExcessBlobGas": "0x00"
+        },
+        "pre": {
+            "0x1000000000000000000000000000000000001000": {
+                "nonce": "0x01",
+                "balance": "0x00",
+                "code": "0x61010060005d61020060015d61030060025d366000600037600060006000600060003660006000f05af160045560005c60005560015c60015560025c600255",
+                "storage": {}
+            },
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                "nonce": "0x00",
+                "balance": "0x3635c9adc5dea00000",
+                "code": "0x",
+                "storage": {}
+            }
+        },
+        "transaction": {
+            "nonce": "0x00",
+            "gasPrice": "0x0a",
+            "gasLimit": [
+                "0x0f4240"
+            ],
+            "to": "0x1000000000000000000000000000000000001000",
+            "value": [
+                "0x00"
+            ],
+            "data": [
+                "0x60005c600055600160005d60005c600155610000600081601c8239f3"
+            ],
+            "sender": "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "secretKey": "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8"
+        },
+        "post": {
+            "Cancun": [
+                {
+                    "hash": "0x27f2871dbb0603d0aa4c65866539e3a0b4f52bf9097b4a6d2b383d5d6e2eea2d",
+                    "logs": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes": "0xf87c800a830f4240941000000000000000000000000000000000001000809c60005c600055600160005d60005c600155610000600081601c8239f325a0e8a8f3a6e28bc5fae93e859e0fa6aad4b71a13dba89dc4807a5514ba2c2490e2a041dea8aa770c8fa3832698725780daddebd124316c507eef565807cbf476a719",
+                    "indexes": {
+                        "data": 0,
+                        "gas": 0,
+                        "value": 0
+                    },
+                    "state": {
+                        "0x1000000000000000000000000000000000001000": {
+                            "nonce": "0x02",
+                            "balance": "0x00",
+                            "code": "0x61010060005d61020060015d61030060025d366000600037600060006000600060003660006000f05af160045560005c60005560015c60015560025c600255",
+                            "storage": {
+                                "0x04": "0x01",
+                                "0x00": "0x0100",
+                                "0x01": "0x0200",
+                                "0x02": "0x0300"
+                            }
+                        },
+                        "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                            "nonce": "0x01",
+                            "balance": "0x3635c9adc5de867d6a",
+                            "code": "0x",
+                            "storage": {}
+                        },
+                        "0x79ab208d79e75ceec315d72eb82ded746a805449": {
+                            "nonce": "0x01",
+                            "balance": "0x00",
+                            "code": "0x",
+                            "storage": {
+                                "0x01": "0x01"
+                            }
+                        },
+                        "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba": {
+                            "nonce": "0x00",
+                            "balance": "0x07a72d",
+                            "code": "0x",
+                            "storage": {}
+                        }
+                    }
+                }
+            ]
+        },
+        "config": {
+            "blobSchedule": {
+                "Cancun": {
+                    "target": "0x03",
+                    "max": "0x06",
+                    "baseFeeUpdateFraction": "0x32f0ed"
+                }
+            },
+            "chainid": "0x01"
+        },
+        "_info": {
+            "hash": "0xbc2f0febc1930d2b2c94549cdc33f0535c6be07f7953ea3449252385ab043e70",
+            "comment": "`execution-spec-tests` generated test",
+            "filling-transition-tool": "ethereum-spec-evm-resolver 0.0.5",
+            "description": "Test class documentation:\n\n    Test transient storage in contract creation contexts.\n    - TSTORE/TLOAD in initcode should not be able to access the creator's transient storage.\n    - TSTORE/TLOAD in initcode should be able to access the created contract's transient\n        storage.\n    - TSTORE/TLOAD in creator contract should be able to use its own transient storage.\n    \n\nTest transient storage in contract creation contexts.",
+            "url": "https://github.com/ethereum/execution-spec-tests/blob/20770a694f440aeb4ea3ec86a3b9bc04d40146a3/tests/cancun/eip1153_tstore/test_tstorage_create_contexts.py#L196",
+            "fixture-format": "state_test",
+            "reference-spec": "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1153.md",
+            "reference-spec-version": "1eb863b534a5a3e19e9c196ab2a7f3db4bb9da17",
+            "eels-resolution": {
+                "git-url": "https://github.com/marioevz/execution-specs.git",
+                "branch": "forks/bpo1",
+                "commit": "3387e5f4aedfe99becfdc39b444d6371e25e0924"
+            }
+        }
+    }
+}
