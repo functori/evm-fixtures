@@ -1,0 +1,156 @@
+{
+    "tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py::test_pointer_reentry[fork_Prague-state_test]": {
+        "env": {
+            "currentCoinbase": "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentGasLimit": "0x055d4a80",
+            "currentNumber": "0x01",
+            "currentTimestamp": "0x03e8",
+            "currentRandom": "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentDifficulty": "0x00",
+            "currentBaseFee": "0x07",
+            "currentExcessBlobGas": "0x00"
+        },
+        "pre": {
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                "nonce": "0x00",
+                "balance": "0x3635c9adc5dea00000",
+                "code": "0x",
+                "storage": {}
+            },
+            "0x8a0a19589531694250d570040a0c4b74576919b8": {
+                "nonce": "0x00",
+                "balance": "0x03e8",
+                "code": "0x",
+                "storage": {}
+            },
+            "0x1000000000000000000000000000000000001000": {
+                "nonce": "0x01",
+                "balance": "0x00",
+                "code": "0x60003560005260203560205260006000604060006000738a0a19589531694250d570040a0c4b74576919b862061a80f1",
+                "storage": {}
+            },
+            "0x1000000000000000000000000000000000001100": {
+                "nonce": "0x01",
+                "balance": "0x64",
+                "code": "0x600035600052602035602052600160005401600055600160015c0160015d60015c60015560006020511460615801576001602051146029580157600260205114600858015760765801565b3260035530600255476004553360055560605801565b326002553060035547600455336005556002602052600060006040600060006000516207a120f160335801565b6001602052600060006040600060007310000000000000000000000000000000000010006207a120f10060035801565b",
+                "storage": {}
+            }
+        },
+        "transaction": {
+            "nonce": "0x00",
+            "maxPriorityFeePerGas": "0x00",
+            "maxFeePerGas": "0x07",
+            "gasLimit": [
+                "0x1e8480"
+            ],
+            "to": "0x8a0a19589531694250d570040a0c4b74576919b8",
+            "value": [
+                "0x00"
+            ],
+            "data": [
+                "0x00000000000000000000000010000000000000000000000000000000000011000000000000000000000000000000000000000000000000000000000000000000"
+            ],
+            "accessLists": [
+                []
+            ],
+            "authorizationList": [
+                {
+                    "chainId": "0x00",
+                    "address": "0x1000000000000000000000000000000000001100",
+                    "nonce": "0x00",
+                    "v": "0x01",
+                    "r": "0xed4ed8dd2835c7efcdda339c4a11e2f1c1c0e5755f749ee9abe8beb00657d772",
+                    "s": "0x0c29a7998592a83986519080fb518335cc0171f9f8c779c9a1a5f411e4f0ce39",
+                    "signer": "0x8a0a19589531694250d570040a0c4b74576919b8",
+                    "yParity": "0x01"
+                }
+            ],
+            "sender": "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "secretKey": "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8"
+        },
+        "post": {
+            "Prague": [
+                {
+                    "hash": "0x7f0cfce85bd19574686108c3f01ae58849db11e8f849d5a841d6a7641278c62b",
+                    "logs": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes": "0x04f9010201808007831e8480948a0a19589531694250d570040a0c4b74576919b880b84000000000000000000000000010000000000000000000000000000000000011000000000000000000000000000000000000000000000000000000000000000000c0f85cf85a809410000000000000000000000000000000000011008001a0ed4ed8dd2835c7efcdda339c4a11e2f1c1c0e5755f749ee9abe8beb00657d772a00c29a7998592a83986519080fb518335cc0171f9f8c779c9a1a5f411e4f0ce3980a09ac4758e0afd447cef76dc4333c2572835d5cf8126ab824eda59535f4ffcd801a02d7249ec71d0fbfe1326f814c8c033d8fde65971fa32c89fb7469b33dd2c191e",
+                    "indexes": {
+                        "data": 0,
+                        "gas": 0,
+                        "value": 0
+                    },
+                    "state": {
+                        "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                            "nonce": "0x01",
+                            "balance": "0x3635c9adc5de7f916d",
+                            "code": "0x",
+                            "storage": {}
+                        },
+                        "0x8a0a19589531694250d570040a0c4b74576919b8": {
+                            "nonce": "0x01",
+                            "balance": "0x03e8",
+                            "code": "0xef01001000000000000000000000000000000000001100",
+                            "storage": {
+                                "0x00": "0x02",
+                                "0x01": "0x02",
+                                "0x02": "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+                                "0x03": "0x8a0a19589531694250d570040a0c4b74576919b8",
+                                "0x04": "0x03e8",
+                                "0x05": "0x1000000000000000000000000000000000001000"
+                            }
+                        },
+                        "0x1000000000000000000000000000000000001000": {
+                            "nonce": "0x01",
+                            "balance": "0x00",
+                            "code": "0x60003560005260203560205260006000604060006000738a0a19589531694250d570040a0c4b74576919b862061a80f1",
+                            "storage": {}
+                        },
+                        "0x1000000000000000000000000000000000001100": {
+                            "nonce": "0x01",
+                            "balance": "0x64",
+                            "code": "0x600035600052602035602052600160005401600055600160015c0160015d60015c60015560006020511460615801576001602051146029580157600260205114600858015760765801565b3260035530600255476004553360055560605801565b326002553060035547600455336005556002602052600060006040600060006000516207a120f160335801565b6001602052600060006040600060007310000000000000000000000000000000000010006207a120f10060035801565b",
+                            "storage": {
+                                "0x00": "0x01",
+                                "0x01": "0x01",
+                                "0x03": "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+                                "0x02": "0x1000000000000000000000000000000000001100",
+                                "0x04": "0x64",
+                                "0x05": "0x8a0a19589531694250d570040a0c4b74576919b8"
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        "config": {
+            "blobSchedule": {
+                "Cancun": {
+                    "target": "0x03",
+                    "max": "0x06",
+                    "baseFeeUpdateFraction": "0x32f0ed"
+                },
+                "Prague": {
+                    "target": "0x06",
+                    "max": "0x09",
+                    "baseFeeUpdateFraction": "0x4c6964"
+                }
+            },
+            "chainid": "0x01"
+        },
+        "_info": {
+            "hash": "0x80a112b4b6888d441d538727cfb528a6080acedd5eeb9945f93887a2b906f3f1",
+            "comment": "`execution-spec-tests` generated test",
+            "filling-transition-tool": "ethereum-spec-evm-resolver 0.0.5",
+            "description": "Check operations when reenter the pointer again\n    TODO: feel free to extend the code checks under given scenarios in switch case.",
+            "url": "https://github.com/ethereum/execution-spec-tests/blob/0044e83ccf97e84932e663ed1441d08efa019e26/tests/prague/eip7702_set_code_tx/test_set_code_txs_2.py#L1113",
+            "fixture-format": "state_test",
+            "reference-spec": "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7702.md",
+            "reference-spec-version": "99f1be49f37c034bdd5c082946f5968710dbfc87",
+            "eels-resolution": {
+                "git-url": "https://github.com/marioevz/execution-specs.git",
+                "branch": "forks/bpo1",
+                "commit": "3387e5f4aedfe99becfdc39b444d6371e25e0924"
+            }
+        }
+    }
+}
