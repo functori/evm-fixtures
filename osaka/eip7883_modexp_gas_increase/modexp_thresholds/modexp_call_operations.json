@@ -1,0 +1,466 @@
+{
+    "tests/osaka/eip7883_modexp_gas_increase/test_modexp_thresholds.py::test_modexp_call_operations[fork_Osaka-state_test-base-heavy-call_opcode_CALLCODE]": {
+        "env": {
+            "currentCoinbase": "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentGasLimit": "0x055d4a80",
+            "currentNumber": "0x01",
+            "currentTimestamp": "0x03e8",
+            "currentRandom": "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentDifficulty": "0x00",
+            "currentBaseFee": "0x07",
+            "currentExcessBlobGas": "0x00"
+        },
+        "pre": {
+            "0x1000000000000000000000000000000000001000": {
+                "nonce": "0x01",
+                "balance": "0x00",
+                "code": "0x3660006000375a60006000366000600060056104b0f25a906000553d60015561007a0190036002553d600060003e3d600020600355",
+                "storage": {}
+            },
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                "nonce": "0x00",
+                "balance": "0x3635c9adc5dea00000",
+                "code": "0x",
+                "storage": {}
+            }
+        },
+        "transaction": {
+            "nonce": "0x00",
+            "gasPrice": "0x0a",
+            "gasLimit": [
+                "0x023c88"
+            ],
+            "to": "0x1000000000000000000000000000000000001000",
+            "value": [
+                "0x00"
+            ],
+            "data": [
+                "0x000000000000000000000000000000000000000000000000000000000000002800000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000028e8e77626586f73b955364c7b4bbf0bb7f7685ebd40e852b164633a4acbd3244c000102030405060701fffffff01681d2220bfea4bb888a5543db8c0916274ddb1ea93b144c042c01d8164c950001020304050607"
+            ],
+            "sender": "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "secretKey": "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8"
+        },
+        "post": {
+            "Osaka": [
+                {
+                    "hash": "0xa6c4454e9b4b02fa1311a000a1f01d079461d08741bc73f2790136cdccf16603",
+                    "logs": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes": "0xf90115800a83023c8894100000000000000000000000000000000000100080b8b4000000000000000000000000000000000000000000000000000000000000002800000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000028e8e77626586f73b955364c7b4bbf0bb7f7685ebd40e852b164633a4acbd3244c000102030405060701fffffff01681d2220bfea4bb888a5543db8c0916274ddb1ea93b144c042c01d8164c95000102030405060725a0ff90fabdb0e198a813a55a501a601cca0d6035dc5a2fd4c78d9a0899ed685671a03d2bb5cbb8f65e2488693c6da687f789356a9e227e65e268555b838aa949c296",
+                    "indexes": {
+                        "data": 0,
+                        "gas": 0,
+                        "value": 0
+                    },
+                    "state": {
+                        "0x1000000000000000000000000000000000001000": {
+                            "nonce": "0x01",
+                            "balance": "0x00",
+                            "code": "0x3660006000375a60006000366000600060056104b0f25a906000553d60015561007a0190036002553d600060003e3d600020600355",
+                            "storage": {
+                                "0x00": "0x01",
+                                "0x01": "0x28",
+                                "0x02": "0x04b0",
+                                "0x03": "0x7f8a6c56dfa7eb36c5813257a65db0d4503a9c3b69afc9247d97efb4af16ac18"
+                            }
+                        },
+                        "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                            "nonce": "0x01",
+                            "balance": "0x3635c9adc5de8ed168",
+                            "code": "0x",
+                            "storage": {}
+                        },
+                        "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba": {
+                            "nonce": "0x00",
+                            "balance": "0x052794",
+                            "code": "0x",
+                            "storage": {}
+                        }
+                    }
+                }
+            ]
+        },
+        "config": {
+            "blobSchedule": {
+                "Cancun": {
+                    "target": "0x03",
+                    "max": "0x06",
+                    "baseFeeUpdateFraction": "0x32f0ed"
+                },
+                "Prague": {
+                    "target": "0x06",
+                    "max": "0x09",
+                    "baseFeeUpdateFraction": "0x4c6964"
+                },
+                "Osaka": {
+                    "target": "0x06",
+                    "max": "0x09",
+                    "baseFeeUpdateFraction": "0x4c6964"
+                }
+            },
+            "chainid": "0x01"
+        },
+        "_info": {
+            "hash": "0x0d2e8f72d778b7d6ddf3f6fa1da5dd87f7b0b6954965cd9640491fb5ddee0434",
+            "comment": "`execution-spec-tests` generated test",
+            "filling-transition-tool": "ethereum-spec-evm-resolver 0.0.5",
+            "description": "Test ModExp call related operations with EIP-7883.",
+            "url": "https://github.com/ethereum/execution-spec-tests/tree/v5.3.0/tests/osaka/eip7883_modexp_gas_increase/test_modexp_thresholds.py#L184",
+            "fixture-format": "state_test",
+            "reference-spec": "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7883.md",
+            "reference-spec-version": "13aa65810336d4f243d4563a828d5afe36035d23",
+            "eels-resolution": {
+                "git-url": "https://github.com/ethereum/execution-specs.git",
+                "branch": "forks/bpos",
+                "commit": "7aacb2c54111391af5e98c505d5010b5698a770f"
+            }
+        }
+    },
+    "tests/osaka/eip7883_modexp_gas_increase/test_modexp_thresholds.py::test_modexp_call_operations[fork_Osaka-state_test-base-heavy-call_opcode_CALL]": {
+        "env": {
+            "currentCoinbase": "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentGasLimit": "0x055d4a80",
+            "currentNumber": "0x01",
+            "currentTimestamp": "0x03e8",
+            "currentRandom": "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentDifficulty": "0x00",
+            "currentBaseFee": "0x07",
+            "currentExcessBlobGas": "0x00"
+        },
+        "pre": {
+            "0x1000000000000000000000000000000000001000": {
+                "nonce": "0x01",
+                "balance": "0x00",
+                "code": "0x3660006000375a60006000366000600060056104b0f15a906000553d60015561007a0190036002553d600060003e3d600020600355",
+                "storage": {}
+            },
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                "nonce": "0x00",
+                "balance": "0x3635c9adc5dea00000",
+                "code": "0x",
+                "storage": {}
+            }
+        },
+        "transaction": {
+            "nonce": "0x00",
+            "gasPrice": "0x0a",
+            "gasLimit": [
+                "0x023c88"
+            ],
+            "to": "0x1000000000000000000000000000000000001000",
+            "value": [
+                "0x00"
+            ],
+            "data": [
+                "0x000000000000000000000000000000000000000000000000000000000000002800000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000028e8e77626586f73b955364c7b4bbf0bb7f7685ebd40e852b164633a4acbd3244c000102030405060701fffffff01681d2220bfea4bb888a5543db8c0916274ddb1ea93b144c042c01d8164c950001020304050607"
+            ],
+            "sender": "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "secretKey": "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8"
+        },
+        "post": {
+            "Osaka": [
+                {
+                    "hash": "0x4aa974ba3cc1e2c4c413e16329ff135f3a95fef68cc7939d9af622e8fc04a1bc",
+                    "logs": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes": "0xf90115800a83023c8894100000000000000000000000000000000000100080b8b4000000000000000000000000000000000000000000000000000000000000002800000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000028e8e77626586f73b955364c7b4bbf0bb7f7685ebd40e852b164633a4acbd3244c000102030405060701fffffff01681d2220bfea4bb888a5543db8c0916274ddb1ea93b144c042c01d8164c95000102030405060725a0ff90fabdb0e198a813a55a501a601cca0d6035dc5a2fd4c78d9a0899ed685671a03d2bb5cbb8f65e2488693c6da687f789356a9e227e65e268555b838aa949c296",
+                    "indexes": {
+                        "data": 0,
+                        "gas": 0,
+                        "value": 0
+                    },
+                    "state": {
+                        "0x1000000000000000000000000000000000001000": {
+                            "nonce": "0x01",
+                            "balance": "0x00",
+                            "code": "0x3660006000375a60006000366000600060056104b0f15a906000553d60015561007a0190036002553d600060003e3d600020600355",
+                            "storage": {
+                                "0x00": "0x01",
+                                "0x01": "0x28",
+                                "0x02": "0x04b0",
+                                "0x03": "0x7f8a6c56dfa7eb36c5813257a65db0d4503a9c3b69afc9247d97efb4af16ac18"
+                            }
+                        },
+                        "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                            "nonce": "0x01",
+                            "balance": "0x3635c9adc5de8ed168",
+                            "code": "0x",
+                            "storage": {}
+                        },
+                        "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba": {
+                            "nonce": "0x00",
+                            "balance": "0x052794",
+                            "code": "0x",
+                            "storage": {}
+                        }
+                    }
+                }
+            ]
+        },
+        "config": {
+            "blobSchedule": {
+                "Cancun": {
+                    "target": "0x03",
+                    "max": "0x06",
+                    "baseFeeUpdateFraction": "0x32f0ed"
+                },
+                "Prague": {
+                    "target": "0x06",
+                    "max": "0x09",
+                    "baseFeeUpdateFraction": "0x4c6964"
+                },
+                "Osaka": {
+                    "target": "0x06",
+                    "max": "0x09",
+                    "baseFeeUpdateFraction": "0x4c6964"
+                }
+            },
+            "chainid": "0x01"
+        },
+        "_info": {
+            "hash": "0xc4f35fc687b481a9a3032f66fc68d4127792ddfb9131b5ae2c47ef7284a7baa5",
+            "comment": "`execution-spec-tests` generated test",
+            "filling-transition-tool": "ethereum-spec-evm-resolver 0.0.5",
+            "description": "Test ModExp call related operations with EIP-7883.",
+            "url": "https://github.com/ethereum/execution-spec-tests/tree/v5.3.0/tests/osaka/eip7883_modexp_gas_increase/test_modexp_thresholds.py#L184",
+            "fixture-format": "state_test",
+            "reference-spec": "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7883.md",
+            "reference-spec-version": "13aa65810336d4f243d4563a828d5afe36035d23",
+            "eels-resolution": {
+                "git-url": "https://github.com/ethereum/execution-specs.git",
+                "branch": "forks/bpos",
+                "commit": "7aacb2c54111391af5e98c505d5010b5698a770f"
+            }
+        }
+    },
+    "tests/osaka/eip7883_modexp_gas_increase/test_modexp_thresholds.py::test_modexp_call_operations[fork_Osaka-state_test-base-heavy-call_opcode_DELEGATECALL]": {
+        "env": {
+            "currentCoinbase": "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentGasLimit": "0x055d4a80",
+            "currentNumber": "0x01",
+            "currentTimestamp": "0x03e8",
+            "currentRandom": "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentDifficulty": "0x00",
+            "currentBaseFee": "0x07",
+            "currentExcessBlobGas": "0x00"
+        },
+        "pre": {
+            "0x1000000000000000000000000000000000001000": {
+                "nonce": "0x01",
+                "balance": "0x00",
+                "code": "0x3660006000375a6000600036600060056104b0f45a906000553d6001556100770190036002553d600060003e3d600020600355",
+                "storage": {}
+            },
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                "nonce": "0x00",
+                "balance": "0x3635c9adc5dea00000",
+                "code": "0x",
+                "storage": {}
+            }
+        },
+        "transaction": {
+            "nonce": "0x00",
+            "gasPrice": "0x0a",
+            "gasLimit": [
+                "0x023c88"
+            ],
+            "to": "0x1000000000000000000000000000000000001000",
+            "value": [
+                "0x00"
+            ],
+            "data": [
+                "0x000000000000000000000000000000000000000000000000000000000000002800000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000028e8e77626586f73b955364c7b4bbf0bb7f7685ebd40e852b164633a4acbd3244c000102030405060701fffffff01681d2220bfea4bb888a5543db8c0916274ddb1ea93b144c042c01d8164c950001020304050607"
+            ],
+            "sender": "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "secretKey": "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8"
+        },
+        "post": {
+            "Osaka": [
+                {
+                    "hash": "0x4bbde413a2498954a0da52fa86a713a62124736dde50813fbbedb5611a87b301",
+                    "logs": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes": "0xf90115800a83023c8894100000000000000000000000000000000000100080b8b4000000000000000000000000000000000000000000000000000000000000002800000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000028e8e77626586f73b955364c7b4bbf0bb7f7685ebd40e852b164633a4acbd3244c000102030405060701fffffff01681d2220bfea4bb888a5543db8c0916274ddb1ea93b144c042c01d8164c95000102030405060725a0ff90fabdb0e198a813a55a501a601cca0d6035dc5a2fd4c78d9a0899ed685671a03d2bb5cbb8f65e2488693c6da687f789356a9e227e65e268555b838aa949c296",
+                    "indexes": {
+                        "data": 0,
+                        "gas": 0,
+                        "value": 0
+                    },
+                    "state": {
+                        "0x1000000000000000000000000000000000001000": {
+                            "nonce": "0x01",
+                            "balance": "0x00",
+                            "code": "0x3660006000375a6000600036600060056104b0f45a906000553d6001556100770190036002553d600060003e3d600020600355",
+                            "storage": {
+                                "0x00": "0x01",
+                                "0x01": "0x28",
+                                "0x02": "0x04b0",
+                                "0x03": "0x7f8a6c56dfa7eb36c5813257a65db0d4503a9c3b69afc9247d97efb4af16ac18"
+                            }
+                        },
+                        "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                            "nonce": "0x01",
+                            "balance": "0x3635c9adc5de8ed186",
+                            "code": "0x",
+                            "storage": {}
+                        },
+                        "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba": {
+                            "nonce": "0x00",
+                            "balance": "0x05278b",
+                            "code": "0x",
+                            "storage": {}
+                        }
+                    }
+                }
+            ]
+        },
+        "config": {
+            "blobSchedule": {
+                "Cancun": {
+                    "target": "0x03",
+                    "max": "0x06",
+                    "baseFeeUpdateFraction": "0x32f0ed"
+                },
+                "Prague": {
+                    "target": "0x06",
+                    "max": "0x09",
+                    "baseFeeUpdateFraction": "0x4c6964"
+                },
+                "Osaka": {
+                    "target": "0x06",
+                    "max": "0x09",
+                    "baseFeeUpdateFraction": "0x4c6964"
+                }
+            },
+            "chainid": "0x01"
+        },
+        "_info": {
+            "hash": "0x5d9ad1aab3fe348f476ccee1840dab977bc0dd235bf2ed13333c95b16973f7bd",
+            "comment": "`execution-spec-tests` generated test",
+            "filling-transition-tool": "ethereum-spec-evm-resolver 0.0.5",
+            "description": "Test ModExp call related operations with EIP-7883.",
+            "url": "https://github.com/ethereum/execution-spec-tests/tree/v5.3.0/tests/osaka/eip7883_modexp_gas_increase/test_modexp_thresholds.py#L184",
+            "fixture-format": "state_test",
+            "reference-spec": "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7883.md",
+            "reference-spec-version": "13aa65810336d4f243d4563a828d5afe36035d23",
+            "eels-resolution": {
+                "git-url": "https://github.com/ethereum/execution-specs.git",
+                "branch": "forks/bpos",
+                "commit": "7aacb2c54111391af5e98c505d5010b5698a770f"
+            }
+        }
+    },
+    "tests/osaka/eip7883_modexp_gas_increase/test_modexp_thresholds.py::test_modexp_call_operations[fork_Osaka-state_test-base-heavy-call_opcode_STATICCALL]": {
+        "env": {
+            "currentCoinbase": "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentGasLimit": "0x055d4a80",
+            "currentNumber": "0x01",
+            "currentTimestamp": "0x03e8",
+            "currentRandom": "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentDifficulty": "0x00",
+            "currentBaseFee": "0x07",
+            "currentExcessBlobGas": "0x00"
+        },
+        "pre": {
+            "0x1000000000000000000000000000000000001000": {
+                "nonce": "0x01",
+                "balance": "0x00",
+                "code": "0x3660006000375a6000600036600060056104b0fa5a906000553d6001556100770190036002553d600060003e3d600020600355",
+                "storage": {}
+            },
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                "nonce": "0x00",
+                "balance": "0x3635c9adc5dea00000",
+                "code": "0x",
+                "storage": {}
+            }
+        },
+        "transaction": {
+            "nonce": "0x00",
+            "gasPrice": "0x0a",
+            "gasLimit": [
+                "0x023c88"
+            ],
+            "to": "0x1000000000000000000000000000000000001000",
+            "value": [
+                "0x00"
+            ],
+            "data": [
+                "0x000000000000000000000000000000000000000000000000000000000000002800000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000028e8e77626586f73b955364c7b4bbf0bb7f7685ebd40e852b164633a4acbd3244c000102030405060701fffffff01681d2220bfea4bb888a5543db8c0916274ddb1ea93b144c042c01d8164c950001020304050607"
+            ],
+            "sender": "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "secretKey": "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8"
+        },
+        "post": {
+            "Osaka": [
+                {
+                    "hash": "0x5bb743fbaf967a4209239779321a437cd922ff1d13e789c4eb29609f1190a79d",
+                    "logs": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes": "0xf90115800a83023c8894100000000000000000000000000000000000100080b8b4000000000000000000000000000000000000000000000000000000000000002800000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000028e8e77626586f73b955364c7b4bbf0bb7f7685ebd40e852b164633a4acbd3244c000102030405060701fffffff01681d2220bfea4bb888a5543db8c0916274ddb1ea93b144c042c01d8164c95000102030405060725a0ff90fabdb0e198a813a55a501a601cca0d6035dc5a2fd4c78d9a0899ed685671a03d2bb5cbb8f65e2488693c6da687f789356a9e227e65e268555b838aa949c296",
+                    "indexes": {
+                        "data": 0,
+                        "gas": 0,
+                        "value": 0
+                    },
+                    "state": {
+                        "0x1000000000000000000000000000000000001000": {
+                            "nonce": "0x01",
+                            "balance": "0x00",
+                            "code": "0x3660006000375a6000600036600060056104b0fa5a906000553d6001556100770190036002553d600060003e3d600020600355",
+                            "storage": {
+                                "0x00": "0x01",
+                                "0x01": "0x28",
+                                "0x02": "0x04b0",
+                                "0x03": "0x7f8a6c56dfa7eb36c5813257a65db0d4503a9c3b69afc9247d97efb4af16ac18"
+                            }
+                        },
+                        "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                            "nonce": "0x01",
+                            "balance": "0x3635c9adc5de8ed186",
+                            "code": "0x",
+                            "storage": {}
+                        },
+                        "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba": {
+                            "nonce": "0x00",
+                            "balance": "0x05278b",
+                            "code": "0x",
+                            "storage": {}
+                        }
+                    }
+                }
+            ]
+        },
+        "config": {
+            "blobSchedule": {
+                "Cancun": {
+                    "target": "0x03",
+                    "max": "0x06",
+                    "baseFeeUpdateFraction": "0x32f0ed"
+                },
+                "Prague": {
+                    "target": "0x06",
+                    "max": "0x09",
+                    "baseFeeUpdateFraction": "0x4c6964"
+                },
+                "Osaka": {
+                    "target": "0x06",
+                    "max": "0x09",
+                    "baseFeeUpdateFraction": "0x4c6964"
+                }
+            },
+            "chainid": "0x01"
+        },
+        "_info": {
+            "hash": "0xd6dc448894652455d640b0506e5cdb20a2382ea641cb796551853bec8b69dc38",
+            "comment": "`execution-spec-tests` generated test",
+            "filling-transition-tool": "ethereum-spec-evm-resolver 0.0.5",
+            "description": "Test ModExp call related operations with EIP-7883.",
+            "url": "https://github.com/ethereum/execution-spec-tests/tree/v5.3.0/tests/osaka/eip7883_modexp_gas_increase/test_modexp_thresholds.py#L184",
+            "fixture-format": "state_test",
+            "reference-spec": "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7883.md",
+            "reference-spec-version": "13aa65810336d4f243d4563a828d5afe36035d23",
+            "eels-resolution": {
+                "git-url": "https://github.com/ethereum/execution-specs.git",
+                "branch": "forks/bpos",
+                "commit": "7aacb2c54111391af5e98c505d5010b5698a770f"
+            }
+        }
+    }
+}

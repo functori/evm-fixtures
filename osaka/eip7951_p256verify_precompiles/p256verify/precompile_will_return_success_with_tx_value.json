@@ -1,0 +1,123 @@
+{
+    "tests/osaka/eip7951_p256verify_precompiles/test_p256verify.py::test_precompile_will_return_success_with_tx_value[fork_Osaka-state_test-valid_input_with_value_transfer]": {
+        "env": {
+            "currentCoinbase": "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentGasLimit": "0x055d4a80",
+            "currentNumber": "0x01",
+            "currentTimestamp": "0x03e8",
+            "currentRandom": "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentDifficulty": "0x00",
+            "currentBaseFee": "0x07",
+            "currentExcessBlobGas": "0x00"
+        },
+        "pre": {
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                "nonce": "0x00",
+                "balance": "0x3635c9adc5dea00000",
+                "code": "0x",
+                "storage": {}
+            },
+            "0x1000000000000000000000000000000000001000": {
+                "nonce": "0x01",
+                "balance": "0x00",
+                "code": "0x3660006000376020600036600034610100611af4f1806000556000516001553d60025500",
+                "storage": {}
+            }
+        },
+        "transaction": {
+            "nonce": "0x00",
+            "gasPrice": "0x0a",
+            "gasLimit": [
+                "0x0f4240"
+            ],
+            "to": "0x1000000000000000000000000000000000001000",
+            "value": [
+                "0x03e8"
+            ],
+            "data": [
+                "0xbb5a52f42f9c9261ed4361f59422a1e30036e7c32b270c8807a419feca6050232ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e184cd60b855d442f5b3c7b11eb6c4e0ae7525fe710fab9aa7c77a67f79e6fadd762927b10512bae3eddcfe467828128bad2903269919f7086069c8c4df6c732838c7787964eaac00e5921fb1498a60f4606766b3d9685001558d1a974e7341513e"
+            ],
+            "sender": "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "secretKey": "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8"
+        },
+        "post": {
+            "Osaka": [
+                {
+                    "hash": "0x2a55370aa66c70a6ce946d084ea4c1098afd38385a811d458f93cfb02ad96be4",
+                    "logs": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes": "0xf90103800a830f42409410000000000000000000000000000000000010008203e8b8a0bb5a52f42f9c9261ed4361f59422a1e30036e7c32b270c8807a419feca6050232ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e184cd60b855d442f5b3c7b11eb6c4e0ae7525fe710fab9aa7c77a67f79e6fadd762927b10512bae3eddcfe467828128bad2903269919f7086069c8c4df6c732838c7787964eaac00e5921fb1498a60f4606766b3d9685001558d1a974e7341513e25a04fa2b99b068abebc9ce497e02a8a1a759ec1fca6d9436ada82b474bdfbb223efa01dbb203af0b72e40b17b20f4d9ef31e50a99135a306c94d17538205b37d29533",
+                    "indexes": {
+                        "data": 0,
+                        "gas": 0,
+                        "value": 0
+                    },
+                    "state": {
+                        "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                            "nonce": "0x01",
+                            "balance": "0x3635c9adc5de8c5c08",
+                            "code": "0x",
+                            "storage": {}
+                        },
+                        "0x1000000000000000000000000000000000001000": {
+                            "nonce": "0x01",
+                            "balance": "0x00",
+                            "code": "0x3660006000376020600036600034610100611af4f1806000556000516001553d60025500",
+                            "storage": {
+                                "0x00": "0x01",
+                                "0x01": "0x01",
+                                "0x02": "0x20"
+                            }
+                        },
+                        "0x0000000000000000000000000000000000000100": {
+                            "nonce": "0x00",
+                            "balance": "0x03e8",
+                            "code": "0x",
+                            "storage": {}
+                        },
+                        "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba": {
+                            "nonce": "0x00",
+                            "balance": "0x05e338",
+                            "code": "0x",
+                            "storage": {}
+                        }
+                    }
+                }
+            ]
+        },
+        "config": {
+            "blobSchedule": {
+                "Cancun": {
+                    "target": "0x03",
+                    "max": "0x06",
+                    "baseFeeUpdateFraction": "0x32f0ed"
+                },
+                "Prague": {
+                    "target": "0x06",
+                    "max": "0x09",
+                    "baseFeeUpdateFraction": "0x4c6964"
+                },
+                "Osaka": {
+                    "target": "0x06",
+                    "max": "0x09",
+                    "baseFeeUpdateFraction": "0x4c6964"
+                }
+            },
+            "chainid": "0x01"
+        },
+        "_info": {
+            "hash": "0xf30acd0945080ac1b708bff1a98c81e6da8ae0757c624f78082f750d82c08e86",
+            "comment": "`execution-spec-tests` generated test",
+            "filling-transition-tool": "ethereum-spec-evm-resolver 0.0.5",
+            "description": "Test P256Verify precompile will not fail if value is sent.",
+            "url": "https://github.com/ethereum/execution-spec-tests/tree/v5.3.0/tests/osaka/eip7951_p256verify_precompiles/test_p256verify.py#L781",
+            "fixture-format": "state_test",
+            "reference-spec": "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7951.md",
+            "reference-spec-version": "06aadd458ee04ede80498db55927b052eb5bef38",
+            "eels-resolution": {
+                "git-url": "https://github.com/ethereum/execution-specs.git",
+                "branch": "forks/bpos",
+                "commit": "7aacb2c54111391af5e98c505d5010b5698a770f"
+            }
+        }
+    }
+}

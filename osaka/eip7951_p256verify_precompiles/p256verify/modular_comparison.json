@@ -1,0 +1,574 @@
+{
+    "tests/osaka/eip7951_p256verify_precompiles/test_p256verify.py::test_modular_comparison[fork_Osaka-state_test--invalid_x_coordinate_exceeds_n]": {
+        "env": {
+            "currentCoinbase": "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentGasLimit": "0x055d4a80",
+            "currentNumber": "0x01",
+            "currentTimestamp": "0x03e8",
+            "currentRandom": "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentDifficulty": "0x00",
+            "currentBaseFee": "0x07",
+            "currentExcessBlobGas": "0x00"
+        },
+        "pre": {
+            "0x1000000000000000000000000000000000001000": {
+                "nonce": "0x01",
+                "balance": "0x00",
+                "code": "0x366000600037600060003660006000610100611af4f13d6001556000553d600060003e3d600020600255",
+                "storage": {}
+            },
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                "nonce": "0x00",
+                "balance": "0x3635c9adc5dea00000",
+                "code": "0x",
+                "storage": {}
+            }
+        },
+        "transaction": {
+            "nonce": "0x00",
+            "gasPrice": "0x0a",
+            "gasLimit": [
+                "0x020891"
+            ],
+            "to": "0x1000000000000000000000000000000000001000",
+            "value": [
+                "0x00"
+            ],
+            "data": [
+                "0xacd155416a8b77f34089464733ff7cd39c400e9c69af7beb9eac5054ed2ec72cffffffff00000000ffffffffffffffff79cdf55a4e2f3d09e7739585f8c64aa60000000000000000000000000000000000000000000000000000000000000003d705d16f80987e2d9b1a6957d29ce22febf7d10fa515153182415c8361baaca4b1fc105ee5ce80d514ec1238beae2037a6f83625593620d460819e8682160926"
+            ],
+            "sender": "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "secretKey": "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8"
+        },
+        "post": {
+            "Osaka": [
+                {
+                    "hash": "0x9f90e532092d4d21b9c8ec472fa0d94dcc5fe1697a6cad2a2efb6999b0ad0d8a",
+                    "logs": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes": "0xf90101800a8302089194100000000000000000000000000000000000100080b8a0acd155416a8b77f34089464733ff7cd39c400e9c69af7beb9eac5054ed2ec72cffffffff00000000ffffffffffffffff79cdf55a4e2f3d09e7739585f8c64aa60000000000000000000000000000000000000000000000000000000000000003d705d16f80987e2d9b1a6957d29ce22febf7d10fa515153182415c8361baaca4b1fc105ee5ce80d514ec1238beae2037a6f83625593620d460819e868216092626a0d6ec7d080eb56beb5814d307aa50fba1e08a112337413ef31d081bc6f2f8a67ca03398ff54fd15515166436e5f2f1de549b9958f7c6cbcf7f268f51a449fadd976",
+                    "indexes": {
+                        "data": 0,
+                        "gas": 0,
+                        "value": 0
+                    },
+                    "state": {
+                        "0x1000000000000000000000000000000000001000": {
+                            "nonce": "0x01",
+                            "balance": "0x00",
+                            "code": "0x366000600037600060003660006000610100611af4f13d6001556000553d600060003e3d600020600255",
+                            "storage": {
+                                "0x00": "0x01",
+                                "0x02": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470"
+                            }
+                        },
+                        "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                            "nonce": "0x01",
+                            "balance": "0x3635c9adc5de944d8c",
+                            "code": "0x",
+                            "storage": {}
+                        },
+                        "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba": {
+                            "nonce": "0x00",
+                            "balance": "0x038256",
+                            "code": "0x",
+                            "storage": {}
+                        }
+                    }
+                }
+            ]
+        },
+        "config": {
+            "blobSchedule": {
+                "Cancun": {
+                    "target": "0x03",
+                    "max": "0x06",
+                    "baseFeeUpdateFraction": "0x32f0ed"
+                },
+                "Prague": {
+                    "target": "0x06",
+                    "max": "0x09",
+                    "baseFeeUpdateFraction": "0x4c6964"
+                },
+                "Osaka": {
+                    "target": "0x06",
+                    "max": "0x09",
+                    "baseFeeUpdateFraction": "0x4c6964"
+                }
+            },
+            "chainid": "0x01"
+        },
+        "_info": {
+            "hash": "0x6e0440e3695f9c5c06b55784106d5a066226ce6654bedf622e0f9327fa0a1745",
+            "comment": "`execution-spec-tests` generated test",
+            "filling-transition-tool": "ethereum-spec-evm-resolver 0.0.5",
+            "description": "Test the modular comparison condition for secp256r1 precompile.\n\n    This tests that when the x-coordinate of R' exceeds the curve order N, the\n    verification should use modular arithmetic: r' \u2261 r (mod N) instead of\n    direct equality r' == r.",
+            "url": "https://github.com/ethereum/execution-spec-tests/tree/v5.3.0/tests/osaka/eip7951_p256verify_precompiles/test_p256verify.py#L833",
+            "fixture-format": "state_test",
+            "reference-spec": "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7951.md",
+            "reference-spec-version": "06aadd458ee04ede80498db55927b052eb5bef38",
+            "eels-resolution": {
+                "git-url": "https://github.com/ethereum/execution-specs.git",
+                "branch": "forks/bpos",
+                "commit": "7aacb2c54111391af5e98c505d5010b5698a770f"
+            }
+        }
+    },
+    "tests/osaka/eip7951_p256verify_precompiles/test_p256verify.py::test_modular_comparison[fork_Osaka-state_test--r_equals_n_plus_one]": {
+        "env": {
+            "currentCoinbase": "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentGasLimit": "0x055d4a80",
+            "currentNumber": "0x01",
+            "currentTimestamp": "0x03e8",
+            "currentRandom": "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentDifficulty": "0x00",
+            "currentBaseFee": "0x07",
+            "currentExcessBlobGas": "0x00"
+        },
+        "pre": {
+            "0x1000000000000000000000000000000000001000": {
+                "nonce": "0x01",
+                "balance": "0x00",
+                "code": "0x366000600037600060003660006000610100611af4f13d6001556000553d600060003e3d600020600255",
+                "storage": {}
+            },
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                "nonce": "0x00",
+                "balance": "0x3635c9adc5dea00000",
+                "code": "0x",
+                "storage": {}
+            }
+        },
+        "transaction": {
+            "nonce": "0x00",
+            "gasPrice": "0x0a",
+            "gasLimit": [
+                "0x020bf7"
+            ],
+            "to": "0x1000000000000000000000000000000000001000",
+            "value": [
+                "0x00"
+            ],
+            "data": [
+                "0xbb5a52f42f9c9261ed4361f59422a1e30036e7c32b270c8807a419feca605023ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc6325524cd60b855d442f5b3c7b11eb6c4e0ae7525fe710fab9aa7c77a67f79e6fadd762927b10512bae3eddcfe467828128bad2903269919f7086069c8c4df6c732838c7787964eaac00e5921fb1498a60f4606766b3d9685001558d1a974e7341513e"
+            ],
+            "sender": "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "secretKey": "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8"
+        },
+        "post": {
+            "Osaka": [
+                {
+                    "hash": "0x2e5eb7f8f6a4c97e82da6a0cc3c9c50117fcc9110b7bf710ccc9bf0039621f78",
+                    "logs": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes": "0xf90101800a83020bf794100000000000000000000000000000000000100080b8a0bb5a52f42f9c9261ed4361f59422a1e30036e7c32b270c8807a419feca605023ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc6325524cd60b855d442f5b3c7b11eb6c4e0ae7525fe710fab9aa7c77a67f79e6fadd762927b10512bae3eddcfe467828128bad2903269919f7086069c8c4df6c732838c7787964eaac00e5921fb1498a60f4606766b3d9685001558d1a974e7341513e25a0058e775de900965c40f028dd914810d739216336802a87d328734c5ddd391d7ea07ca74433fef598d5fc5c975f7381f03daa59074bbaf13b78593187903ae1ff3c",
+                    "indexes": {
+                        "data": 0,
+                        "gas": 0,
+                        "value": 0
+                    },
+                    "state": {
+                        "0x1000000000000000000000000000000000001000": {
+                            "nonce": "0x01",
+                            "balance": "0x00",
+                            "code": "0x366000600037600060003660006000610100611af4f13d6001556000553d600060003e3d600020600255",
+                            "storage": {
+                                "0x00": "0x01",
+                                "0x02": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470"
+                            }
+                        },
+                        "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                            "nonce": "0x01",
+                            "balance": "0x3635c9adc5de943ff4",
+                            "code": "0x",
+                            "storage": {}
+                        },
+                        "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba": {
+                            "nonce": "0x00",
+                            "balance": "0x03866a",
+                            "code": "0x",
+                            "storage": {}
+                        }
+                    }
+                }
+            ]
+        },
+        "config": {
+            "blobSchedule": {
+                "Cancun": {
+                    "target": "0x03",
+                    "max": "0x06",
+                    "baseFeeUpdateFraction": "0x32f0ed"
+                },
+                "Prague": {
+                    "target": "0x06",
+                    "max": "0x09",
+                    "baseFeeUpdateFraction": "0x4c6964"
+                },
+                "Osaka": {
+                    "target": "0x06",
+                    "max": "0x09",
+                    "baseFeeUpdateFraction": "0x4c6964"
+                }
+            },
+            "chainid": "0x01"
+        },
+        "_info": {
+            "hash": "0xbd95aa03bdddb75ab2d6b2ff0c452249521f06b1e0b4a6c37a58db3cc220ce0b",
+            "comment": "`execution-spec-tests` generated test",
+            "filling-transition-tool": "ethereum-spec-evm-resolver 0.0.5",
+            "description": "Test the modular comparison condition for secp256r1 precompile.\n\n    This tests that when the x-coordinate of R' exceeds the curve order N, the\n    verification should use modular arithmetic: r' \u2261 r (mod N) instead of\n    direct equality r' == r.",
+            "url": "https://github.com/ethereum/execution-spec-tests/tree/v5.3.0/tests/osaka/eip7951_p256verify_precompiles/test_p256verify.py#L833",
+            "fixture-format": "state_test",
+            "reference-spec": "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7951.md",
+            "reference-spec-version": "06aadd458ee04ede80498db55927b052eb5bef38",
+            "eels-resolution": {
+                "git-url": "https://github.com/ethereum/execution-specs.git",
+                "branch": "forks/bpos",
+                "commit": "7aacb2c54111391af5e98c505d5010b5698a770f"
+            }
+        }
+    },
+    "tests/osaka/eip7951_p256verify_precompiles/test_p256verify.py::test_modular_comparison[fork_Osaka-state_test--r_equals_n_plus_two]": {
+        "env": {
+            "currentCoinbase": "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentGasLimit": "0x055d4a80",
+            "currentNumber": "0x01",
+            "currentTimestamp": "0x03e8",
+            "currentRandom": "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentDifficulty": "0x00",
+            "currentBaseFee": "0x07",
+            "currentExcessBlobGas": "0x00"
+        },
+        "pre": {
+            "0x1000000000000000000000000000000000001000": {
+                "nonce": "0x01",
+                "balance": "0x00",
+                "code": "0x366000600037600060003660006000610100611af4f13d6001556000553d600060003e3d600020600255",
+                "storage": {}
+            },
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                "nonce": "0x00",
+                "balance": "0x3635c9adc5dea00000",
+                "code": "0x",
+                "storage": {}
+            }
+        },
+        "transaction": {
+            "nonce": "0x00",
+            "gasPrice": "0x0a",
+            "gasLimit": [
+                "0x020bf7"
+            ],
+            "to": "0x1000000000000000000000000000000000001000",
+            "value": [
+                "0x00"
+            ],
+            "data": [
+                "0xbb5a52f42f9c9261ed4361f59422a1e30036e7c32b270c8807a419feca605023ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc6325534cd60b855d442f5b3c7b11eb6c4e0ae7525fe710fab9aa7c77a67f79e6fadd762927b10512bae3eddcfe467828128bad2903269919f7086069c8c4df6c732838c7787964eaac00e5921fb1498a60f4606766b3d9685001558d1a974e7341513e"
+            ],
+            "sender": "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "secretKey": "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8"
+        },
+        "post": {
+            "Osaka": [
+                {
+                    "hash": "0x2e5eb7f8f6a4c97e82da6a0cc3c9c50117fcc9110b7bf710ccc9bf0039621f78",
+                    "logs": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes": "0xf90101800a83020bf794100000000000000000000000000000000000100080b8a0bb5a52f42f9c9261ed4361f59422a1e30036e7c32b270c8807a419feca605023ffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc6325534cd60b855d442f5b3c7b11eb6c4e0ae7525fe710fab9aa7c77a67f79e6fadd762927b10512bae3eddcfe467828128bad2903269919f7086069c8c4df6c732838c7787964eaac00e5921fb1498a60f4606766b3d9685001558d1a974e7341513e26a079c1e9bd5544d1b225f226e212fb705524e4ede65dcefaee0c5541fe9433059da0304f868a46203a0bc2c250fc7d82e7f5cbcba682934c2d319bf638f1c62bffe3",
+                    "indexes": {
+                        "data": 0,
+                        "gas": 0,
+                        "value": 0
+                    },
+                    "state": {
+                        "0x1000000000000000000000000000000000001000": {
+                            "nonce": "0x01",
+                            "balance": "0x00",
+                            "code": "0x366000600037600060003660006000610100611af4f13d6001556000553d600060003e3d600020600255",
+                            "storage": {
+                                "0x00": "0x01",
+                                "0x02": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470"
+                            }
+                        },
+                        "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                            "nonce": "0x01",
+                            "balance": "0x3635c9adc5de943ff4",
+                            "code": "0x",
+                            "storage": {}
+                        },
+                        "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba": {
+                            "nonce": "0x00",
+                            "balance": "0x03866a",
+                            "code": "0x",
+                            "storage": {}
+                        }
+                    }
+                }
+            ]
+        },
+        "config": {
+            "blobSchedule": {
+                "Cancun": {
+                    "target": "0x03",
+                    "max": "0x06",
+                    "baseFeeUpdateFraction": "0x32f0ed"
+                },
+                "Prague": {
+                    "target": "0x06",
+                    "max": "0x09",
+                    "baseFeeUpdateFraction": "0x4c6964"
+                },
+                "Osaka": {
+                    "target": "0x06",
+                    "max": "0x09",
+                    "baseFeeUpdateFraction": "0x4c6964"
+                }
+            },
+            "chainid": "0x01"
+        },
+        "_info": {
+            "hash": "0x20c984ebc891f3afbadffaa034c26693a0fffdb1d69a8a6cc581af8e258e3ada",
+            "comment": "`execution-spec-tests` generated test",
+            "filling-transition-tool": "ethereum-spec-evm-resolver 0.0.5",
+            "description": "Test the modular comparison condition for secp256r1 precompile.\n\n    This tests that when the x-coordinate of R' exceeds the curve order N, the\n    verification should use modular arithmetic: r' \u2261 r (mod N) instead of\n    direct equality r' == r.",
+            "url": "https://github.com/ethereum/execution-spec-tests/tree/v5.3.0/tests/osaka/eip7951_p256verify_precompiles/test_p256verify.py#L833",
+            "fixture-format": "state_test",
+            "reference-spec": "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7951.md",
+            "reference-spec-version": "06aadd458ee04ede80498db55927b052eb5bef38",
+            "eels-resolution": {
+                "git-url": "https://github.com/ethereum/execution-specs.git",
+                "branch": "forks/bpos",
+                "commit": "7aacb2c54111391af5e98c505d5010b5698a770f"
+            }
+        }
+    },
+    "tests/osaka/eip7951_p256verify_precompiles/test_p256verify.py::test_modular_comparison[fork_Osaka-state_test--x_coordinate_exceeds_n]": {
+        "env": {
+            "currentCoinbase": "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentGasLimit": "0x055d4a80",
+            "currentNumber": "0x01",
+            "currentTimestamp": "0x03e8",
+            "currentRandom": "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentDifficulty": "0x00",
+            "currentBaseFee": "0x07",
+            "currentExcessBlobGas": "0x00"
+        },
+        "pre": {
+            "0x1000000000000000000000000000000000001000": {
+                "nonce": "0x01",
+                "balance": "0x00",
+                "code": "0x366000600037600060003660006000610100611af4f13d6001556000553d600060003e3d600020600255",
+                "storage": {}
+            },
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                "nonce": "0x00",
+                "balance": "0x3635c9adc5dea00000",
+                "code": "0x",
+                "storage": {}
+            }
+        },
+        "transaction": {
+            "nonce": "0x00",
+            "gasPrice": "0x0a",
+            "gasLimit": [
+                "0x020a17"
+            ],
+            "to": "0x1000000000000000000000000000000000001000",
+            "value": [
+                "0x00"
+            ],
+            "data": [
+                "0xbb5a52f42f9c9261ed4361f59422a1e30036e7c32b270c8807a419feca605023000000000000000000000000000000004319055358e8617b0c46353d039cdaabffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc63254e0ad99500288d466940031d72a9f5445a4d43784640855bf0a69874d2de5fe103c5011e6ef2c42dcd50d5d3d29f99ae6eba2c80c9244f4c5422f0979ff0c3ba5e"
+            ],
+            "sender": "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "secretKey": "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8"
+        },
+        "post": {
+            "Osaka": [
+                {
+                    "hash": "0x69b68b857f7cff2a50cba39a4c1d0f50344ac69a30a76b55b12e22d1935e4037",
+                    "logs": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes": "0xf90101800a83020a1794100000000000000000000000000000000000100080b8a0bb5a52f42f9c9261ed4361f59422a1e30036e7c32b270c8807a419feca605023000000000000000000000000000000004319055358e8617b0c46353d039cdaabffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc63254e0ad99500288d466940031d72a9f5445a4d43784640855bf0a69874d2de5fe103c5011e6ef2c42dcd50d5d3d29f99ae6eba2c80c9244f4c5422f0979ff0c3ba5e25a005e723fc97d2a20003688b2d68d71ffcc3f30e9f3b8f3a1c13d9c165012f931ea0091c4487766cac3449d6a45835a3f30fc70681731da53240ad869151132b3312",
+                    "indexes": {
+                        "data": 0,
+                        "gas": 0,
+                        "value": 0
+                    },
+                    "state": {
+                        "0x1000000000000000000000000000000000001000": {
+                            "nonce": "0x01",
+                            "balance": "0x00",
+                            "code": "0x366000600037600060003660006000610100611af4f13d6001556000553d600060003e3d600020600255",
+                            "storage": {
+                                "0x01": "0x20",
+                                "0x00": "0x01",
+                                "0x02": "0xb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf6"
+                            }
+                        },
+                        "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                            "nonce": "0x01",
+                            "balance": "0x3635c9adc5de913dc2",
+                            "code": "0x",
+                            "storage": {}
+                        },
+                        "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba": {
+                            "nonce": "0x00",
+                            "balance": "0x046d79",
+                            "code": "0x",
+                            "storage": {}
+                        }
+                    }
+                }
+            ]
+        },
+        "config": {
+            "blobSchedule": {
+                "Cancun": {
+                    "target": "0x03",
+                    "max": "0x06",
+                    "baseFeeUpdateFraction": "0x32f0ed"
+                },
+                "Prague": {
+                    "target": "0x06",
+                    "max": "0x09",
+                    "baseFeeUpdateFraction": "0x4c6964"
+                },
+                "Osaka": {
+                    "target": "0x06",
+                    "max": "0x09",
+                    "baseFeeUpdateFraction": "0x4c6964"
+                }
+            },
+            "chainid": "0x01"
+        },
+        "_info": {
+            "hash": "0xf8be2574d6f90662666ec3e7cc27e86fe80d6c5d949b544fcaccc1fbce37ede7",
+            "comment": "`execution-spec-tests` generated test",
+            "filling-transition-tool": "ethereum-spec-evm-resolver 0.0.5",
+            "description": "Test the modular comparison condition for secp256r1 precompile.\n\n    This tests that when the x-coordinate of R' exceeds the curve order N, the\n    verification should use modular arithmetic: r' \u2261 r (mod N) instead of\n    direct equality r' == r.",
+            "url": "https://github.com/ethereum/execution-spec-tests/tree/v5.3.0/tests/osaka/eip7951_p256verify_precompiles/test_p256verify.py#L833",
+            "fixture-format": "state_test",
+            "reference-spec": "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7951.md",
+            "reference-spec-version": "06aadd458ee04ede80498db55927b052eb5bef38",
+            "eels-resolution": {
+                "git-url": "https://github.com/ethereum/execution-specs.git",
+                "branch": "forks/bpos",
+                "commit": "7aacb2c54111391af5e98c505d5010b5698a770f"
+            }
+        }
+    },
+    "tests/osaka/eip7951_p256verify_precompiles/test_p256verify.py::test_modular_comparison[fork_Osaka-state_test--x_coordinate_exceeds_n_v2]": {
+        "env": {
+            "currentCoinbase": "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentGasLimit": "0x055d4a80",
+            "currentNumber": "0x01",
+            "currentTimestamp": "0x03e8",
+            "currentRandom": "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentDifficulty": "0x00",
+            "currentBaseFee": "0x07",
+            "currentExcessBlobGas": "0x00"
+        },
+        "pre": {
+            "0x1000000000000000000000000000000000001000": {
+                "nonce": "0x01",
+                "balance": "0x00",
+                "code": "0x366000600037600060003660006000610100611af4f13d6001556000553d600060003e3d600020600255",
+                "storage": {}
+            },
+            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                "nonce": "0x00",
+                "balance": "0x3635c9adc5dea00000",
+                "code": "0x",
+                "storage": {}
+            }
+        },
+        "transaction": {
+            "nonce": "0x00",
+            "gasPrice": "0x0a",
+            "gasLimit": [
+                "0x020a35"
+            ],
+            "to": "0x1000000000000000000000000000000000001000",
+            "value": [
+                "0x00"
+            ],
+            "data": [
+                "0x532eaabd9574880dbf76b9b8cc00832c20a6ec113d682299550d7a6e0f345e25000000000000000000000000000000004319055358e8617b0c46353d039cdaabffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc63254ed705d16f80987e2d9b1a6957d29ce22febf7d10fa515153182415c8361baaca4b1fc105ee5ce80d514ec1238beae2037a6f83625593620d460819e8682160926"
+            ],
+            "sender": "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "secretKey": "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8"
+        },
+        "post": {
+            "Osaka": [
+                {
+                    "hash": "0xdaafb44db89b31dc74b733f3aa8997bcc02b4144c12c9388e2792e14c256afc7",
+                    "logs": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes": "0xf90101800a83020a3594100000000000000000000000000000000000100080b8a0532eaabd9574880dbf76b9b8cc00832c20a6ec113d682299550d7a6e0f345e25000000000000000000000000000000004319055358e8617b0c46353d039cdaabffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc63254ed705d16f80987e2d9b1a6957d29ce22febf7d10fa515153182415c8361baaca4b1fc105ee5ce80d514ec1238beae2037a6f83625593620d460819e868216092626a01805211e0ef8002642a2d998350b1ca0aa535629cb9d884b52634fe446587537a03277d743c0af5947e75f3636f068d70eee689acddbda8e2d17a0141f27d85aa2",
+                    "indexes": {
+                        "data": 0,
+                        "gas": 0,
+                        "value": 0
+                    },
+                    "state": {
+                        "0x1000000000000000000000000000000000001000": {
+                            "nonce": "0x01",
+                            "balance": "0x00",
+                            "code": "0x366000600037600060003660006000610100611af4f13d6001556000553d600060003e3d600020600255",
+                            "storage": {
+                                "0x01": "0x20",
+                                "0x00": "0x01",
+                                "0x02": "0xb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf6"
+                            }
+                        },
+                        "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                            "nonce": "0x01",
+                            "balance": "0x3635c9adc5de913d4a",
+                            "code": "0x",
+                            "storage": {}
+                        },
+                        "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba": {
+                            "nonce": "0x00",
+                            "balance": "0x046d9d",
+                            "code": "0x",
+                            "storage": {}
+                        }
+                    }
+                }
+            ]
+        },
+        "config": {
+            "blobSchedule": {
+                "Cancun": {
+                    "target": "0x03",
+                    "max": "0x06",
+                    "baseFeeUpdateFraction": "0x32f0ed"
+                },
+                "Prague": {
+                    "target": "0x06",
+                    "max": "0x09",
+                    "baseFeeUpdateFraction": "0x4c6964"
+                },
+                "Osaka": {
+                    "target": "0x06",
+                    "max": "0x09",
+                    "baseFeeUpdateFraction": "0x4c6964"
+                }
+            },
+            "chainid": "0x01"
+        },
+        "_info": {
+            "hash": "0xb70c3a2ff3bdd1420fe676f484e7bf8a47379f4a31d6cd1fcf4370a006900137",
+            "comment": "`execution-spec-tests` generated test",
+            "filling-transition-tool": "ethereum-spec-evm-resolver 0.0.5",
+            "description": "Test the modular comparison condition for secp256r1 precompile.\n\n    This tests that when the x-coordinate of R' exceeds the curve order N, the\n    verification should use modular arithmetic: r' \u2261 r (mod N) instead of\n    direct equality r' == r.",
+            "url": "https://github.com/ethereum/execution-spec-tests/tree/v5.3.0/tests/osaka/eip7951_p256verify_precompiles/test_p256verify.py#L833",
+            "fixture-format": "state_test",
+            "reference-spec": "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7951.md",
+            "reference-spec-version": "06aadd458ee04ede80498db55927b052eb5bef38",
+            "eels-resolution": {
+                "git-url": "https://github.com/ethereum/execution-specs.git",
+                "branch": "forks/bpos",
+                "commit": "7aacb2c54111391af5e98c505d5010b5698a770f"
+            }
+        }
+    }
+}

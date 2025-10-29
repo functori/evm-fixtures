@@ -1,0 +1,133 @@
+{
+    "tests/osaka/eip7939_count_leading_zeros/test_count_leading_zeros.py::test_clz_from_set_code[fork_Osaka-state_test]": {
+        "env": {
+            "currentCoinbase": "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentGasLimit": "0x055d4a80",
+            "currentNumber": "0x01",
+            "currentTimestamp": "0x03e8",
+            "currentRandom": "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentDifficulty": "0x00",
+            "currentBaseFee": "0x07",
+            "currentExcessBlobGas": "0x00"
+        },
+        "pre": {
+            "0x1000000000000000000000000000000000001000": {
+                "nonce": "0x01",
+                "balance": "0x00",
+                "code": "0x60011e60005560021e6001557001000000000000000000000000000000001e6002557f80000000000000000000000000000000000000000000000000000000000000001e60035500",
+                "storage": {}
+            },
+            "0x8a0a19589531694250d570040a0c4b74576919b8": {
+                "nonce": "0x00",
+                "balance": "0x3635c9adc5dea00000",
+                "code": "0x",
+                "storage": {}
+            }
+        },
+        "transaction": {
+            "nonce": "0x00",
+            "maxPriorityFeePerGas": "0x00",
+            "maxFeePerGas": "0x07",
+            "gasLimit": [
+                "0x030d40"
+            ],
+            "to": "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+            "value": [
+                "0x00"
+            ],
+            "data": [
+                "0x"
+            ],
+            "accessLists": [
+                []
+            ],
+            "authorizationList": [
+                {
+                    "chainId": "0x00",
+                    "address": "0x1000000000000000000000000000000000001000",
+                    "nonce": "0x00",
+                    "v": "0x01",
+                    "r": "0xca8d0ded5f80d4725377a5ad0dae227557cf67f9cc24a856772344bd69c7b86d",
+                    "s": "0x190a92f881719d14d5b904a70f386271fb8a4c896bad822128f412bc32a292c4",
+                    "signer": "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
+                    "yParity": "0x01"
+                }
+            ],
+            "sender": "0x8a0a19589531694250d570040a0c4b74576919b8",
+            "secretKey": "0x9e7645d0cfd9c3a04eb7a9db59a4eb7d359f2e75c9164a9d6b9a7d54e1b6a36f"
+        },
+        "post": {
+            "Osaka": [
+                {
+                    "hash": "0xce9a4b5dffed67e50e1dbe70cbf9b372c020852eb6066515776da8694a669995",
+                    "logs": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "txbytes": "0x04f8c10180800783030d4094a94f5374fce5edbc8e2a8697c15331677e6ebf0b8080c0f85cf85a809410000000000000000000000000000000000010008001a0ca8d0ded5f80d4725377a5ad0dae227557cf67f9cc24a856772344bd69c7b86da0190a92f881719d14d5b904a70f386271fb8a4c896bad822128f412bc32a292c401a0c805e1507e290ad311ca29117f7c5e4520d737bb74a18f802aac9c90af2867f0a010b9ee257093123f5a9a65674fac00c2a69eda6e542140e3619470a08ed8daee",
+                    "indexes": {
+                        "data": 0,
+                        "gas": 0,
+                        "value": 0
+                    },
+                    "state": {
+                        "0x1000000000000000000000000000000000001000": {
+                            "nonce": "0x01",
+                            "balance": "0x00",
+                            "code": "0x60011e60005560021e6001557001000000000000000000000000000000001e6002557f80000000000000000000000000000000000000000000000000000000000000001e60035500",
+                            "storage": {}
+                        },
+                        "0x8a0a19589531694250d570040a0c4b74576919b8": {
+                            "nonce": "0x01",
+                            "balance": "0x3635c9adc5de93c3f0",
+                            "code": "0x",
+                            "storage": {}
+                        },
+                        "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                            "nonce": "0x01",
+                            "balance": "0x00",
+                            "code": "0xef01001000000000000000000000000000000000001000",
+                            "storage": {
+                                "0x00": "0xff",
+                                "0x01": "0xfe",
+                                "0x02": "0x7f"
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        "config": {
+            "blobSchedule": {
+                "Cancun": {
+                    "target": "0x03",
+                    "max": "0x06",
+                    "baseFeeUpdateFraction": "0x32f0ed"
+                },
+                "Prague": {
+                    "target": "0x06",
+                    "max": "0x09",
+                    "baseFeeUpdateFraction": "0x4c6964"
+                },
+                "Osaka": {
+                    "target": "0x06",
+                    "max": "0x09",
+                    "baseFeeUpdateFraction": "0x4c6964"
+                }
+            },
+            "chainid": "0x01"
+        },
+        "_info": {
+            "hash": "0xba3732f3c5378a675c969461fb6b2c6d9623b994dc84fa9d09a82f203db1dd71",
+            "comment": "`execution-spec-tests` generated test",
+            "filling-transition-tool": "ethereum-spec-evm-resolver 0.0.5",
+            "description": "Test the address opcode in a set-code transaction.",
+            "url": "https://github.com/ethereum/execution-spec-tests/tree/v5.3.0/tests/osaka/eip7939_count_leading_zeros/test_count_leading_zeros.py#L404",
+            "fixture-format": "state_test",
+            "reference-spec": "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7939.md",
+            "reference-spec-version": "c8321494fdfbfda52ad46c3515a7ca5dc86b857c",
+            "eels-resolution": {
+                "git-url": "https://github.com/ethereum/execution-specs.git",
+                "branch": "forks/bpos",
+                "commit": "7aacb2c54111391af5e98c505d5010b5698a770f"
+            }
+        }
+    }
+}
