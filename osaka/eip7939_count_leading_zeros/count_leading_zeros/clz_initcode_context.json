@@ -2,7 +2,7 @@
     "tests/osaka/eip7939_count_leading_zeros/test_count_leading_zeros.py::test_clz_initcode_context[fork_Osaka-state_test]": {
         "env": {
             "currentCoinbase": "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
-            "currentGasLimit": "0x055d4a80",
+            "currentGasLimit": "0x07270e00",
             "currentNumber": "0x01",
             "currentTimestamp": "0x03e8",
             "currentRandom": "0x0000000000000000000000000000000000000000000000000000000000000000",
@@ -11,18 +11,19 @@
             "currentExcessBlobGas": "0x00"
         },
         "pre": {
-            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+            "0xf6c3a9edc1afa0ad5b720e4d42e1437c43d3b3ff": {
                 "nonce": "0x00",
-                "balance": "0x3635c9adc5dea00000",
+                "balance": "0x033b2e3c9fd0803ce8000000",
                 "code": "0x",
                 "storage": {}
             }
         },
         "transaction": {
+            "chainId": "0x01",
             "nonce": "0x00",
             "gasPrice": "0x0a",
             "gasLimit": [
-                "0x5b8d80"
+                "0x01000000"
             ],
             "value": [
                 "0x00"
@@ -30,29 +31,38 @@
             "data": [
                 "0x60011e60005560021e600155680100000000000000001e6002557001000000000000000000000000000000001e6003557f80000000000000000000000000000000000000000000000000000000000000001e600455"
             ],
-            "sender": "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
-            "secretKey": "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8",
+            "sender": "0xf6c3a9edc1afa0ad5b720e4d42e1437c43d3b3ff",
+            "secretKey": "0x1ad604b3d94e06ec50b27732ec677f3d857c4d588f082f0016317697dd3a2d92",
             "to": ""
         },
         "post": {
             "Osaka": [
                 {
-                    "hash": "0x069c34a4e25fa71ef2485ec56b081370f73bdf1998fa2a52bdae4340dd277fba",
+                    "hash": "0xd5d5158df2a7c2d5c257dc7959b2c55302d4627d71ccb2cbca3a90ba13c3f077",
                     "logs": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
-                    "txbytes": "0xf8a2800a835b8d808080b85560011e60005560021e600155680100000000000000001e6002557001000000000000000000000000000000001e6003557f80000000000000000000000000000000000000000000000000000000000000001e60045526a02f583e5993b3a00db3d1fe2fa36f4be75095ed9ee30d7f941718cc98dee570b1a06bd587af7d99c49c8cd9c5ce93c6fae1808e3602b3483b5a13caf1ed347730ed",
+                    "receipt": {
+                        "transactionHash": "0x4ce3f0118f3046d8de4a4fda59548c05123bd872c03426185dcef20e61113d0b",
+                        "type": "0x00",
+                        "cumulativeGasUsed": "0x0233dd",
+                        "bloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                        "logs": [],
+                        "status": true,
+                        "rlp": "0xf9010901830233ddb9010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000c0"
+                    },
+                    "txbytes": "0xf8a3800a84010000008080b85560011e60005560021e600155680100000000000000001e6002557001000000000000000000000000000000001e6003557f80000000000000000000000000000000000000000000000000000000000000001e60045525a05b25b4bbe21cdda5d7d3d354d664cc018316565601f4b2bb0f6cb32a3704c611a00119263f9800592e0765113d6415b726de0ef77b174efb867349db1d9bd6fb0f",
                     "indexes": {
                         "data": 0,
                         "gas": 0,
                         "value": 0
                     },
                     "state": {
-                        "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                        "0xf6c3a9edc1afa0ad5b720e4d42e1437c43d3b3ff": {
                             "nonce": "0x01",
-                            "balance": "0x3635c9adc5de89f95e",
+                            "balance": "0x033b2e3c9fd0803ce7e9f95e",
                             "code": "0x",
                             "storage": {}
                         },
-                        "0x6295ee1b4f6dd65047762f924ecd367c17eabf8f": {
+                        "0x081f85bbb63f960f83724898686620b3e01a5542": {
                             "nonce": "0x01",
                             "balance": "0x00",
                             "code": "0x",
@@ -94,19 +104,34 @@
             "chainid": "0x01"
         },
         "_info": {
-            "hash": "0x7036a337de19e1ae4ca9eab246f2c824ebade572bc3cb073fbd206cce67d33e9",
-            "comment": "`execution-spec-tests` generated test",
-            "filling-transition-tool": "ethereum-spec-evm-resolver 0.0.5",
-            "description": "Test CLZ opcode behavior when creating a contract.",
-            "url": "https://github.com/ethereum/execution-spec-tests/tree/v5.3.0/tests/osaka/eip7939_count_leading_zeros/test_count_leading_zeros.py#L551",
+            "hash": "0xed90c1c9de45020fe7c4e09588d590c3f84a25753d9c1c3485e2d9005cb9108e",
             "fixture-format": "state_test",
+            "comment": "`execution-specs` generated test",
+            "filling-transition-tool": "2.19.0",
+            "description": "Test CLZ opcode behavior when creating a contract.",
+            "url": "https://github.com/ethereum/execution-specs/blob/tests@v21.0.1/tests/osaka/eip7939_count_leading_zeros/test_count_leading_zeros.py#L569",
+            "metadata": {
+                "opcode_count": {
+                    "PUSH1": 7,
+                    "CLZ": 5,
+                    "SSTORE": 5,
+                    "PUSH9": 1,
+                    "PUSH17": 1,
+                    "PUSH32": 1
+                },
+                "opcode_count_per_block": [
+                    {
+                        "PUSH1": 7,
+                        "CLZ": 5,
+                        "SSTORE": 5,
+                        "PUSH9": 1,
+                        "PUSH17": 1,
+                        "PUSH32": 1
+                    }
+                ]
+            },
             "reference-spec": "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7939.md",
-            "reference-spec-version": "c8321494fdfbfda52ad46c3515a7ca5dc86b857c",
-            "eels-resolution": {
-                "git-url": "https://github.com/ethereum/execution-specs.git",
-                "branch": "forks/bpos",
-                "commit": "7aacb2c54111391af5e98c505d5010b5698a770f"
-            }
+            "reference-spec-version": "c8321494fdfbfda52ad46c3515a7ca5dc86b857c"
         }
     }
 }

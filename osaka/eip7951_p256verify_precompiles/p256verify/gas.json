@@ -2,7 +2,7 @@
     "tests/osaka/eip7951_p256verify_precompiles/test_p256verify.py::test_gas[fork_Osaka-state_test--3450_gas]": {
         "env": {
             "currentCoinbase": "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
-            "currentGasLimit": "0x055d4a80",
+            "currentGasLimit": "0x07270e00",
             "currentNumber": "0x01",
             "currentTimestamp": "0x03e8",
             "currentRandom": "0x0000000000000000000000000000000000000000000000000000000000000000",
@@ -11,62 +11,70 @@
             "currentExcessBlobGas": "0x00"
         },
         "pre": {
-            "0x1000000000000000000000000000000000001000": {
+            "0x363dd7bd7b02128c4f116068e0a7073a029cc3f3": {
                 "nonce": "0x01",
                 "balance": "0x00",
                 "code": "0x366000600037600060003660006000610100610d7af13d600155600055",
                 "storage": {}
             },
-            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+            "0xf6c3a9edc1afa0ad5b720e4d42e1437c43d3b3ff": {
                 "nonce": "0x00",
-                "balance": "0x3635c9adc5dea00000",
+                "balance": "0x033b2e3c9fd0803ce8000000",
                 "code": "0x",
                 "storage": {}
             }
         },
         "transaction": {
+            "chainId": "0x01",
             "nonce": "0x00",
-            "gasPrice": "0x0a",
+            "maxPriorityFeePerGas": "0x00",
+            "maxFeePerGas": "0x07",
             "gasLimit": [
-                "0x020c6f"
+                "0x01000000"
             ],
-            "to": "0x1000000000000000000000000000000000001000",
+            "to": "0x363dd7bd7b02128c4f116068e0a7073a029cc3f3",
             "value": [
                 "0x00"
             ],
             "data": [
                 "0xbb5a52f42f9c9261ed4361f59422a1e30036e7c32b270c8807a419feca6050232ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e184cd60b855d442f5b3c7b11eb6c4e0ae7525fe710fab9aa7c77a67f79e6fadd762927b10512bae3eddcfe467828128bad2903269919f7086069c8c4df6c732838c7787964eaac00e5921fb1498a60f4606766b3d9685001558d1a974e7341513e"
             ],
-            "sender": "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
-            "secretKey": "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8"
+            "accessLists": [
+                []
+            ],
+            "sender": "0xf6c3a9edc1afa0ad5b720e4d42e1437c43d3b3ff",
+            "secretKey": "0x1ad604b3d94e06ec50b27732ec677f3d857c4d588f082f0016317697dd3a2d92"
         },
         "post": {
             "Osaka": [
                 {
-                    "hash": "0x6eb7027f18408f0d82e0dc75310d0a668777c10f2e6bd1d847ed174f82c912ae",
+                    "hash": "0x5e8585d2db59c9ef5c1e30396e612b72842dd6261fa547cda0023e5b8e4b3d48",
                     "logs": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
-                    "txbytes": "0xf90101800a83020c6f94100000000000000000000000000000000000100080b8a0bb5a52f42f9c9261ed4361f59422a1e30036e7c32b270c8807a419feca6050232ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e184cd60b855d442f5b3c7b11eb6c4e0ae7525fe710fab9aa7c77a67f79e6fadd762927b10512bae3eddcfe467828128bad2903269919f7086069c8c4df6c732838c7787964eaac00e5921fb1498a60f4606766b3d9685001558d1a974e7341513e25a081eb841b4fb49704144aff5ec92273dcad5551f7ade715b882b27885e5bacda5a050096e10233ee7f69c33d51cd9d09887980011cc088981a3724d70e098c7ac06",
+                    "receipt": {
+                        "transactionHash": "0x9ab968104e3006a88c12a98a923c304e6950702d97f9dc7aaa42e78a542952ae",
+                        "type": "0x02",
+                        "cumulativeGasUsed": "0x7b43",
+                        "bloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                        "logs": [],
+                        "status": true,
+                        "rlp": "0x02f9010801827b43b9010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000c0"
+                    },
+                    "txbytes": "0x02f9010501808007840100000094363dd7bd7b02128c4f116068e0a7073a029cc3f380b8a0bb5a52f42f9c9261ed4361f59422a1e30036e7c32b270c8807a419feca6050232ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e184cd60b855d442f5b3c7b11eb6c4e0ae7525fe710fab9aa7c77a67f79e6fadd762927b10512bae3eddcfe467828128bad2903269919f7086069c8c4df6c732838c7787964eaac00e5921fb1498a60f4606766b3d9685001558d1a974e7341513ec080a060fab57b15f621df27d2caecc31ea58daa6997f117c57cf4b3ee910503874774a0073c07a87d35fbb9f6212a937ee0f2141290b327a21e64e58a5e8ffdeee8333c",
                     "indexes": {
                         "data": 0,
                         "gas": 0,
                         "value": 0
                     },
                     "state": {
-                        "0x1000000000000000000000000000000000001000": {
+                        "0x363dd7bd7b02128c4f116068e0a7073a029cc3f3": {
                             "nonce": "0x01",
                             "balance": "0x00",
                             "code": "0x366000600037600060003660006000610100610d7af13d600155600055",
                             "storage": {}
                         },
-                        "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                        "0xf6c3a9edc1afa0ad5b720e4d42e1437c43d3b3ff": {
                             "nonce": "0x01",
-                            "balance": "0x3635c9adc5de9b2f62",
-                            "code": "0x",
-                            "storage": {}
-                        },
-                        "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba": {
-                            "nonce": "0x00",
-                            "balance": "0x0171c9",
+                            "balance": "0x033b2e3c9fd0803ce7fca12b",
                             "code": "0x",
                             "storage": {}
                         }
@@ -95,25 +103,42 @@
             "chainid": "0x01"
         },
         "_info": {
-            "hash": "0xdbd2e53e87f442a2c625853bde62c56ec450258bc0a3c9658b361171abe02659",
-            "comment": "`execution-spec-tests` generated test",
-            "filling-transition-tool": "ethereum-spec-evm-resolver 0.0.5",
-            "description": "Test P256Verify precompile gas requirements.",
-            "url": "https://github.com/ethereum/execution-spec-tests/tree/v5.3.0/tests/osaka/eip7951_p256verify_precompiles/test_p256verify.py#L686",
+            "hash": "0x8ad71b4d56f1bca153e1ebb2f295af7428adb2979f6dd703468871c80becd399",
             "fixture-format": "state_test",
+            "comment": "`execution-specs` generated test",
+            "filling-transition-tool": "2.19.0",
+            "description": "Test P256Verify precompile gas requirements.",
+            "url": "https://github.com/ethereum/execution-specs/blob/tests@v21.0.1/tests/osaka/eip7951_p256verify_precompiles/test_p256verify.py#L980",
+            "metadata": {
+                "opcode_count": {
+                    "CALLDATASIZE": 2,
+                    "PUSH1": 8,
+                    "CALLDATACOPY": 1,
+                    "PUSH2": 2,
+                    "CALL": 1,
+                    "RETURNDATASIZE": 1,
+                    "SSTORE": 2
+                },
+                "opcode_count_per_block": [
+                    {
+                        "CALLDATASIZE": 2,
+                        "PUSH1": 8,
+                        "CALLDATACOPY": 1,
+                        "PUSH2": 2,
+                        "CALL": 1,
+                        "RETURNDATASIZE": 1,
+                        "SSTORE": 2
+                    }
+                ]
+            },
             "reference-spec": "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7951.md",
-            "reference-spec-version": "06aadd458ee04ede80498db55927b052eb5bef38",
-            "eels-resolution": {
-                "git-url": "https://github.com/ethereum/execution-specs.git",
-                "branch": "forks/bpos",
-                "commit": "7aacb2c54111391af5e98c505d5010b5698a770f"
-            }
+            "reference-spec-version": "06aadd458ee04ede80498db55927b052eb5bef38"
         }
     },
     "tests/osaka/eip7951_p256verify_precompiles/test_p256verify.py::test_gas[fork_Osaka-state_test--extra_gas]": {
         "env": {
             "currentCoinbase": "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
-            "currentGasLimit": "0x055d4a80",
+            "currentGasLimit": "0x07270e00",
             "currentNumber": "0x01",
             "currentTimestamp": "0x03e8",
             "currentRandom": "0x0000000000000000000000000000000000000000000000000000000000000000",
@@ -122,48 +147,62 @@
             "currentExcessBlobGas": "0x00"
         },
         "pre": {
-            "0x1000000000000000000000000000000000001000": {
+            "0xcaae970429b7bfcd0c33700e4e82ba7b7120facd": {
                 "nonce": "0x01",
                 "balance": "0x00",
                 "code": "0x366000600037600060003660006000610100611af5f13d6001556000553d600060003e3d600020600255",
                 "storage": {}
             },
-            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+            "0xf6c3a9edc1afa0ad5b720e4d42e1437c43d3b3ff": {
                 "nonce": "0x00",
-                "balance": "0x3635c9adc5dea00000",
+                "balance": "0x033b2e3c9fd0803ce8000000",
                 "code": "0x",
                 "storage": {}
             }
         },
         "transaction": {
+            "chainId": "0x01",
             "nonce": "0x00",
-            "gasPrice": "0x0a",
+            "maxPriorityFeePerGas": "0x00",
+            "maxFeePerGas": "0x07",
             "gasLimit": [
-                "0x020c6f"
+                "0x01000000"
             ],
-            "to": "0x1000000000000000000000000000000000001000",
+            "to": "0xcaae970429b7bfcd0c33700e4e82ba7b7120facd",
             "value": [
                 "0x00"
             ],
             "data": [
                 "0xbb5a52f42f9c9261ed4361f59422a1e30036e7c32b270c8807a419feca6050232ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e184cd60b855d442f5b3c7b11eb6c4e0ae7525fe710fab9aa7c77a67f79e6fadd762927b10512bae3eddcfe467828128bad2903269919f7086069c8c4df6c732838c7787964eaac00e5921fb1498a60f4606766b3d9685001558d1a974e7341513e"
             ],
-            "sender": "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
-            "secretKey": "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8"
+            "accessLists": [
+                []
+            ],
+            "sender": "0xf6c3a9edc1afa0ad5b720e4d42e1437c43d3b3ff",
+            "secretKey": "0x1ad604b3d94e06ec50b27732ec677f3d857c4d588f082f0016317697dd3a2d92"
         },
         "post": {
             "Osaka": [
                 {
-                    "hash": "0x1ac77e69e187cb4f803bd13f769ae5f787fb01870bdf01e7a26f995fedc228cb",
+                    "hash": "0xa41a7ec1dce0b99e74249038630f5901b7026bbf9d60ff8cfe6669117e7c8705",
                     "logs": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
-                    "txbytes": "0xf90101800a83020c6f94100000000000000000000000000000000000100080b8a0bb5a52f42f9c9261ed4361f59422a1e30036e7c32b270c8807a419feca6050232ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e184cd60b855d442f5b3c7b11eb6c4e0ae7525fe710fab9aa7c77a67f79e6fadd762927b10512bae3eddcfe467828128bad2903269919f7086069c8c4df6c732838c7787964eaac00e5921fb1498a60f4606766b3d9685001558d1a974e7341513e25a081eb841b4fb49704144aff5ec92273dcad5551f7ade715b882b27885e5bacda5a050096e10233ee7f69c33d51cd9d09887980011cc088981a3724d70e098c7ac06",
+                    "receipt": {
+                        "transactionHash": "0xd5dbf509922db3791d9247e1639cc084109ccc9032576f1b2e7c74b1d7884294",
+                        "type": "0x02",
+                        "cumulativeGasUsed": "0x017ac3",
+                        "bloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                        "logs": [],
+                        "status": true,
+                        "rlp": "0x02f901090183017ac3b9010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000c0"
+                    },
+                    "txbytes": "0x02f9010501808007840100000094caae970429b7bfcd0c33700e4e82ba7b7120facd80b8a0bb5a52f42f9c9261ed4361f59422a1e30036e7c32b270c8807a419feca6050232ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e184cd60b855d442f5b3c7b11eb6c4e0ae7525fe710fab9aa7c77a67f79e6fadd762927b10512bae3eddcfe467828128bad2903269919f7086069c8c4df6c732838c7787964eaac00e5921fb1498a60f4606766b3d9685001558d1a974e7341513ec080a0627595a4e0bced5b7a11a55c9acdb1d2c04deb6bf44c9a3d8fc97c9e0f2e3887a005d3934ca329855871d36c6fc060293f7cecc6570148fd148f9c9c121fb21c8f",
                     "indexes": {
                         "data": 0,
                         "gas": 0,
                         "value": 0
                     },
                     "state": {
-                        "0x1000000000000000000000000000000000001000": {
+                        "0xcaae970429b7bfcd0c33700e4e82ba7b7120facd": {
                             "nonce": "0x01",
                             "balance": "0x00",
                             "code": "0x366000600037600060003660006000610100611af5f13d6001556000553d600060003e3d600020600255",
@@ -173,15 +212,9 @@
                                 "0x02": "0xb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf6"
                             }
                         },
-                        "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                        "0xf6c3a9edc1afa0ad5b720e4d42e1437c43d3b3ff": {
                             "nonce": "0x01",
-                            "balance": "0x3635c9adc5de913462",
-                            "code": "0x",
-                            "storage": {}
-                        },
-                        "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba": {
-                            "nonce": "0x00",
-                            "balance": "0x047049",
+                            "balance": "0x033b2e3c9fd0803ce7f5a4ab",
                             "code": "0x",
                             "storage": {}
                         }
@@ -210,25 +243,46 @@
             "chainid": "0x01"
         },
         "_info": {
-            "hash": "0x3742e97993767d001233a1228f7a7ba700092d92e44f64978f023321fa98bc4b",
-            "comment": "`execution-spec-tests` generated test",
-            "filling-transition-tool": "ethereum-spec-evm-resolver 0.0.5",
-            "description": "Test P256Verify precompile gas requirements.",
-            "url": "https://github.com/ethereum/execution-spec-tests/tree/v5.3.0/tests/osaka/eip7951_p256verify_precompiles/test_p256verify.py#L686",
+            "hash": "0x4167f27a343673019faae9377b90eef3a4c8aa55621dc51965216bbfd3579b39",
             "fixture-format": "state_test",
+            "comment": "`execution-specs` generated test",
+            "filling-transition-tool": "2.19.0",
+            "description": "Test P256Verify precompile gas requirements.",
+            "url": "https://github.com/ethereum/execution-specs/blob/tests@v21.0.1/tests/osaka/eip7951_p256verify_precompiles/test_p256verify.py#L980",
+            "metadata": {
+                "opcode_count": {
+                    "CALLDATASIZE": 2,
+                    "PUSH1": 12,
+                    "CALLDATACOPY": 1,
+                    "PUSH2": 2,
+                    "CALL": 1,
+                    "RETURNDATASIZE": 3,
+                    "SSTORE": 3,
+                    "RETURNDATACOPY": 1,
+                    "SHA3": 1
+                },
+                "opcode_count_per_block": [
+                    {
+                        "CALLDATASIZE": 2,
+                        "PUSH1": 12,
+                        "CALLDATACOPY": 1,
+                        "PUSH2": 2,
+                        "CALL": 1,
+                        "RETURNDATASIZE": 3,
+                        "SSTORE": 3,
+                        "RETURNDATACOPY": 1,
+                        "SHA3": 1
+                    }
+                ]
+            },
             "reference-spec": "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7951.md",
-            "reference-spec-version": "06aadd458ee04ede80498db55927b052eb5bef38",
-            "eels-resolution": {
-                "git-url": "https://github.com/ethereum/execution-specs.git",
-                "branch": "forks/bpos",
-                "commit": "7aacb2c54111391af5e98c505d5010b5698a770f"
-            }
+            "reference-spec-version": "06aadd458ee04ede80498db55927b052eb5bef38"
         }
     },
     "tests/osaka/eip7951_p256verify_precompiles/test_p256verify.py::test_gas[fork_Osaka-state_test--insufficient_gas]": {
         "env": {
             "currentCoinbase": "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
-            "currentGasLimit": "0x055d4a80",
+            "currentGasLimit": "0x07270e00",
             "currentNumber": "0x01",
             "currentTimestamp": "0x03e8",
             "currentRandom": "0x0000000000000000000000000000000000000000000000000000000000000000",
@@ -237,62 +291,70 @@
             "currentExcessBlobGas": "0x00"
         },
         "pre": {
-            "0x1000000000000000000000000000000000001000": {
+            "0x8ea4c57cd25e944d9aa26f157e8b2abfd4429e9c": {
                 "nonce": "0x01",
                 "balance": "0x00",
                 "code": "0x366000600037600060003660006000610100611af3f13d600155600055",
                 "storage": {}
             },
-            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+            "0xf6c3a9edc1afa0ad5b720e4d42e1437c43d3b3ff": {
                 "nonce": "0x00",
-                "balance": "0x3635c9adc5dea00000",
+                "balance": "0x033b2e3c9fd0803ce8000000",
                 "code": "0x",
                 "storage": {}
             }
         },
         "transaction": {
+            "chainId": "0x01",
             "nonce": "0x00",
-            "gasPrice": "0x0a",
+            "maxPriorityFeePerGas": "0x00",
+            "maxFeePerGas": "0x07",
             "gasLimit": [
-                "0x020c6f"
+                "0x01000000"
             ],
-            "to": "0x1000000000000000000000000000000000001000",
+            "to": "0x8ea4c57cd25e944d9aa26f157e8b2abfd4429e9c",
             "value": [
                 "0x00"
             ],
             "data": [
                 "0xbb5a52f42f9c9261ed4361f59422a1e30036e7c32b270c8807a419feca6050232ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e184cd60b855d442f5b3c7b11eb6c4e0ae7525fe710fab9aa7c77a67f79e6fadd762927b10512bae3eddcfe467828128bad2903269919f7086069c8c4df6c732838c7787964eaac00e5921fb1498a60f4606766b3d9685001558d1a974e7341513e"
             ],
-            "sender": "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
-            "secretKey": "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8"
+            "accessLists": [
+                []
+            ],
+            "sender": "0xf6c3a9edc1afa0ad5b720e4d42e1437c43d3b3ff",
+            "secretKey": "0x1ad604b3d94e06ec50b27732ec677f3d857c4d588f082f0016317697dd3a2d92"
         },
         "post": {
             "Osaka": [
                 {
-                    "hash": "0x2432ebea98f348d286e6672e518ce418876e708ecee38923dd84f9f0ad18f249",
+                    "hash": "0x90281ab97541254d645316c95131a9cf0fa260be7e5fb8ceab70ec48f08931ec",
                     "logs": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
-                    "txbytes": "0xf90101800a83020c6f94100000000000000000000000000000000000100080b8a0bb5a52f42f9c9261ed4361f59422a1e30036e7c32b270c8807a419feca6050232ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e184cd60b855d442f5b3c7b11eb6c4e0ae7525fe710fab9aa7c77a67f79e6fadd762927b10512bae3eddcfe467828128bad2903269919f7086069c8c4df6c732838c7787964eaac00e5921fb1498a60f4606766b3d9685001558d1a974e7341513e25a081eb841b4fb49704144aff5ec92273dcad5551f7ade715b882b27885e5bacda5a050096e10233ee7f69c33d51cd9d09887980011cc088981a3724d70e098c7ac06",
+                    "receipt": {
+                        "transactionHash": "0x8e28ee9b1ae92d577dcee468e18dc06d1befdf39ffb740f001206c8f50230273",
+                        "type": "0x02",
+                        "cumulativeGasUsed": "0x88bc",
+                        "bloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                        "logs": [],
+                        "status": true,
+                        "rlp": "0x02f90108018288bcb9010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000c0"
+                    },
+                    "txbytes": "0x02f90105018080078401000000948ea4c57cd25e944d9aa26f157e8b2abfd4429e9c80b8a0bb5a52f42f9c9261ed4361f59422a1e30036e7c32b270c8807a419feca6050232ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e184cd60b855d442f5b3c7b11eb6c4e0ae7525fe710fab9aa7c77a67f79e6fadd762927b10512bae3eddcfe467828128bad2903269919f7086069c8c4df6c732838c7787964eaac00e5921fb1498a60f4606766b3d9685001558d1a974e7341513ec080a0270412741950a971f5d9b72740c21382e1c8f5594bebfa3ebd557738c552ab04a0038af13ce592144b04e4610a3c6e26247be0b53d104533c5d7823d4fdd667818",
                     "indexes": {
                         "data": 0,
                         "gas": 0,
                         "value": 0
                     },
                     "state": {
-                        "0x1000000000000000000000000000000000001000": {
+                        "0x8ea4c57cd25e944d9aa26f157e8b2abfd4429e9c": {
                             "nonce": "0x01",
                             "balance": "0x00",
                             "code": "0x366000600037600060003660006000610100611af3f13d600155600055",
                             "storage": {}
                         },
-                        "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                        "0xf6c3a9edc1afa0ad5b720e4d42e1437c43d3b3ff": {
                             "nonce": "0x01",
-                            "balance": "0x3635c9adc5de9aa8a8",
-                            "code": "0x",
-                            "storage": {}
-                        },
-                        "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba": {
-                            "nonce": "0x00",
-                            "balance": "0x019a34",
+                            "balance": "0x033b2e3c9fd0803ce7fc42dc",
                             "code": "0x",
                             "storage": {}
                         }
@@ -321,25 +383,42 @@
             "chainid": "0x01"
         },
         "_info": {
-            "hash": "0x4094297b35e60468e0f05e967b7b7e9c8cf6cb0df4c4f0db97646f5aa9031ee6",
-            "comment": "`execution-spec-tests` generated test",
-            "filling-transition-tool": "ethereum-spec-evm-resolver 0.0.5",
-            "description": "Test P256Verify precompile gas requirements.",
-            "url": "https://github.com/ethereum/execution-spec-tests/tree/v5.3.0/tests/osaka/eip7951_p256verify_precompiles/test_p256verify.py#L686",
+            "hash": "0xd55c33d077d073c70acd3945269386ccd0a744fedd31132ebd8f14f46fb809f4",
             "fixture-format": "state_test",
+            "comment": "`execution-specs` generated test",
+            "filling-transition-tool": "2.19.0",
+            "description": "Test P256Verify precompile gas requirements.",
+            "url": "https://github.com/ethereum/execution-specs/blob/tests@v21.0.1/tests/osaka/eip7951_p256verify_precompiles/test_p256verify.py#L980",
+            "metadata": {
+                "opcode_count": {
+                    "CALLDATASIZE": 2,
+                    "PUSH1": 8,
+                    "CALLDATACOPY": 1,
+                    "PUSH2": 2,
+                    "CALL": 1,
+                    "RETURNDATASIZE": 1,
+                    "SSTORE": 2
+                },
+                "opcode_count_per_block": [
+                    {
+                        "CALLDATASIZE": 2,
+                        "PUSH1": 8,
+                        "CALLDATACOPY": 1,
+                        "PUSH2": 2,
+                        "CALL": 1,
+                        "RETURNDATASIZE": 1,
+                        "SSTORE": 2
+                    }
+                ]
+            },
             "reference-spec": "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7951.md",
-            "reference-spec-version": "06aadd458ee04ede80498db55927b052eb5bef38",
-            "eels-resolution": {
-                "git-url": "https://github.com/ethereum/execution-specs.git",
-                "branch": "forks/bpos",
-                "commit": "7aacb2c54111391af5e98c505d5010b5698a770f"
-            }
+            "reference-spec-version": "06aadd458ee04ede80498db55927b052eb5bef38"
         }
     },
     "tests/osaka/eip7951_p256verify_precompiles/test_p256verify.py::test_gas[fork_Osaka-state_test--zero_gas]": {
         "env": {
             "currentCoinbase": "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
-            "currentGasLimit": "0x055d4a80",
+            "currentGasLimit": "0x07270e00",
             "currentNumber": "0x01",
             "currentTimestamp": "0x03e8",
             "currentRandom": "0x0000000000000000000000000000000000000000000000000000000000000000",
@@ -348,62 +427,70 @@
             "currentExcessBlobGas": "0x00"
         },
         "pre": {
-            "0x1000000000000000000000000000000000001000": {
+            "0x2aabdbae41688813cfef858e9c3014c816b6b644": {
                 "nonce": "0x01",
                 "balance": "0x00",
                 "code": "0x3660006000376000600036600060006101006000f13d600155600055",
                 "storage": {}
             },
-            "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+            "0xf6c3a9edc1afa0ad5b720e4d42e1437c43d3b3ff": {
                 "nonce": "0x00",
-                "balance": "0x3635c9adc5dea00000",
+                "balance": "0x033b2e3c9fd0803ce8000000",
                 "code": "0x",
                 "storage": {}
             }
         },
         "transaction": {
+            "chainId": "0x01",
             "nonce": "0x00",
-            "gasPrice": "0x0a",
+            "maxPriorityFeePerGas": "0x00",
+            "maxFeePerGas": "0x07",
             "gasLimit": [
-                "0x020c6f"
+                "0x01000000"
             ],
-            "to": "0x1000000000000000000000000000000000001000",
+            "to": "0x2aabdbae41688813cfef858e9c3014c816b6b644",
             "value": [
                 "0x00"
             ],
             "data": [
                 "0xbb5a52f42f9c9261ed4361f59422a1e30036e7c32b270c8807a419feca6050232ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e184cd60b855d442f5b3c7b11eb6c4e0ae7525fe710fab9aa7c77a67f79e6fadd762927b10512bae3eddcfe467828128bad2903269919f7086069c8c4df6c732838c7787964eaac00e5921fb1498a60f4606766b3d9685001558d1a974e7341513e"
             ],
-            "sender": "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
-            "secretKey": "0x45a915e4d060149eb4365960e6a7a45f334393093061116b197e3240065ff2d8"
+            "accessLists": [
+                []
+            ],
+            "sender": "0xf6c3a9edc1afa0ad5b720e4d42e1437c43d3b3ff",
+            "secretKey": "0x1ad604b3d94e06ec50b27732ec677f3d857c4d588f082f0016317697dd3a2d92"
         },
         "post": {
             "Osaka": [
                 {
-                    "hash": "0x7fd41e05041ff8a86510f18af6c18977dd60e131e57edc36921d8027502d85bd",
+                    "hash": "0xdb3d92ced78c5a2487bf1eb9555ccaf7e4dbb8ef8589027e723e234ae8478b02",
                     "logs": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
-                    "txbytes": "0xf90101800a83020c6f94100000000000000000000000000000000000100080b8a0bb5a52f42f9c9261ed4361f59422a1e30036e7c32b270c8807a419feca6050232ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e184cd60b855d442f5b3c7b11eb6c4e0ae7525fe710fab9aa7c77a67f79e6fadd762927b10512bae3eddcfe467828128bad2903269919f7086069c8c4df6c732838c7787964eaac00e5921fb1498a60f4606766b3d9685001558d1a974e7341513e25a081eb841b4fb49704144aff5ec92273dcad5551f7ade715b882b27885e5bacda5a050096e10233ee7f69c33d51cd9d09887980011cc088981a3724d70e098c7ac06",
+                    "receipt": {
+                        "transactionHash": "0x2e32033b1f0e0f217631013d55f2fdb852064603200afb9a3c24949b594d1fc5",
+                        "type": "0x02",
+                        "cumulativeGasUsed": "0x6dc9",
+                        "bloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                        "logs": [],
+                        "status": true,
+                        "rlp": "0x02f9010801826dc9b9010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000c0"
+                    },
+                    "txbytes": "0x02f90105018080078401000000942aabdbae41688813cfef858e9c3014c816b6b64480b8a0bb5a52f42f9c9261ed4361f59422a1e30036e7c32b270c8807a419feca6050232ba3a8be6b94d5ec80a6d9d1190a436effe50d85a1eee859b8cc6af9bd5c2e184cd60b855d442f5b3c7b11eb6c4e0ae7525fe710fab9aa7c77a67f79e6fadd762927b10512bae3eddcfe467828128bad2903269919f7086069c8c4df6c732838c7787964eaac00e5921fb1498a60f4606766b3d9685001558d1a974e7341513ec001a08126067896c9971b4952485411e5e9dfab4c61b0294bd0f9f10230042493b265a03e6d4cdc4aa7f6d03ea6f05c271ec42675cce8c63f28150e05c3fb890b571fe4",
                     "indexes": {
                         "data": 0,
                         "gas": 0,
                         "value": 0
                     },
                     "state": {
-                        "0x1000000000000000000000000000000000001000": {
+                        "0x2aabdbae41688813cfef858e9c3014c816b6b644": {
                             "nonce": "0x01",
                             "balance": "0x00",
                             "code": "0x3660006000376000600036600060006101006000f13d600155600055",
                             "storage": {}
                         },
-                        "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b": {
+                        "0xf6c3a9edc1afa0ad5b720e4d42e1437c43d3b3ff": {
                             "nonce": "0x01",
-                            "balance": "0x3635c9adc5de9bb626",
-                            "code": "0x",
-                            "storage": {}
-                        },
-                        "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba": {
-                            "nonce": "0x00",
-                            "balance": "0x01495b",
+                            "balance": "0x033b2e3c9fd0803ce7fcff81",
                             "code": "0x",
                             "storage": {}
                         }
@@ -432,19 +519,36 @@
             "chainid": "0x01"
         },
         "_info": {
-            "hash": "0xf6136f990eb39e8dea7abf0c7c839dfb145cc2db653658e3c60cd356064bcc6f",
-            "comment": "`execution-spec-tests` generated test",
-            "filling-transition-tool": "ethereum-spec-evm-resolver 0.0.5",
-            "description": "Test P256Verify precompile gas requirements.",
-            "url": "https://github.com/ethereum/execution-spec-tests/tree/v5.3.0/tests/osaka/eip7951_p256verify_precompiles/test_p256verify.py#L686",
+            "hash": "0x66d0c4cb602233eeb8dbd930241838d884f83b6f205922271a9fdc6360b0f3a4",
             "fixture-format": "state_test",
+            "comment": "`execution-specs` generated test",
+            "filling-transition-tool": "2.19.0",
+            "description": "Test P256Verify precompile gas requirements.",
+            "url": "https://github.com/ethereum/execution-specs/blob/tests@v21.0.1/tests/osaka/eip7951_p256verify_precompiles/test_p256verify.py#L980",
+            "metadata": {
+                "opcode_count": {
+                    "CALLDATASIZE": 2,
+                    "PUSH1": 9,
+                    "CALLDATACOPY": 1,
+                    "PUSH2": 1,
+                    "CALL": 1,
+                    "RETURNDATASIZE": 1,
+                    "SSTORE": 2
+                },
+                "opcode_count_per_block": [
+                    {
+                        "CALLDATASIZE": 2,
+                        "PUSH1": 9,
+                        "CALLDATACOPY": 1,
+                        "PUSH2": 1,
+                        "CALL": 1,
+                        "RETURNDATASIZE": 1,
+                        "SSTORE": 2
+                    }
+                ]
+            },
             "reference-spec": "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7951.md",
-            "reference-spec-version": "06aadd458ee04ede80498db55927b052eb5bef38",
-            "eels-resolution": {
-                "git-url": "https://github.com/ethereum/execution-specs.git",
-                "branch": "forks/bpos",
-                "commit": "7aacb2c54111391af5e98c505d5010b5698a770f"
-            }
+            "reference-spec-version": "06aadd458ee04ede80498db55927b052eb5bef38"
         }
     }
 }
