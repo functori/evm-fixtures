@@ -1,0 +1,132 @@
+{
+    "tests/osaka/eip7825_transaction_gas_limit_cap/test_eip_mainnet.py::test_tx_gas_limit_cap_at_maximum[fork_Osaka-state_test]": {
+        "env": {
+            "currentCoinbase": "0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
+            "currentGasLimit": "0x07270e00",
+            "currentNumber": "0x01",
+            "currentTimestamp": "0x03e8",
+            "currentRandom": "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "currentDifficulty": "0x00",
+            "currentBaseFee": "0x07",
+            "currentExcessBlobGas": "0x00"
+        },
+        "pre": {
+            "0x43e6f595ac8e8c6e584c7a2d9949a6bfae8c4287": {
+                "nonce": "0x01",
+                "balance": "0x00",
+                "code": "0x600160005500",
+                "storage": {}
+            },
+            "0xf6c3a9edc1afa0ad5b720e4d42e1437c43d3b3ff": {
+                "nonce": "0x00",
+                "balance": "0x033b2e3c9fd0803ce8000000",
+                "code": "0x",
+                "storage": {}
+            }
+        },
+        "transaction": {
+            "chainId": "0x01",
+            "nonce": "0x00",
+            "maxPriorityFeePerGas": "0x00",
+            "maxFeePerGas": "0x07",
+            "gasLimit": [
+                "0x01000000"
+            ],
+            "to": "0x43e6f595ac8e8c6e584c7a2d9949a6bfae8c4287",
+            "value": [
+                "0x00"
+            ],
+            "data": [
+                "0x"
+            ],
+            "accessLists": [
+                []
+            ],
+            "sender": "0xf6c3a9edc1afa0ad5b720e4d42e1437c43d3b3ff",
+            "secretKey": "0x1ad604b3d94e06ec50b27732ec677f3d857c4d588f082f0016317697dd3a2d92"
+        },
+        "post": {
+            "Osaka": [
+                {
+                    "hash": "0x89d61b365ff329b8930cc08c0f011986596506d041745142ab800daafff3d29b",
+                    "logs": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+                    "receipt": {
+                        "transactionHash": "0xe83982af54608fe0cdb2689e8e3ad7fee25afe4b93401d0c276bb3abf726b725",
+                        "type": "0x02",
+                        "cumulativeGasUsed": "0xa862",
+                        "bloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                        "logs": [],
+                        "status": true,
+                        "rlp": "0x02f901080182a862b9010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000c0"
+                    },
+                    "txbytes": "0x02f8640180800784010000009443e6f595ac8e8c6e584c7a2d9949a6bfae8c42878080c080a08056b22261b06e0472af8909cd422e1829d8a53ec878d47d4882348c6fb869c1a03dc27b854e6038e90b4d5157d6ba24f4b304fbbbefc0a05715743cd52b08008b",
+                    "indexes": {
+                        "data": 0,
+                        "gas": 0,
+                        "value": 0
+                    },
+                    "state": {
+                        "0x43e6f595ac8e8c6e584c7a2d9949a6bfae8c4287": {
+                            "nonce": "0x01",
+                            "balance": "0x00",
+                            "code": "0x600160005500",
+                            "storage": {
+                                "0x00": "0x01"
+                            }
+                        },
+                        "0xf6c3a9edc1afa0ad5b720e4d42e1437c43d3b3ff": {
+                            "nonce": "0x01",
+                            "balance": "0x033b2e3c9fd0803ce7fb6552",
+                            "code": "0x",
+                            "storage": {}
+                        }
+                    }
+                }
+            ]
+        },
+        "config": {
+            "blobSchedule": {
+                "Cancun": {
+                    "target": "0x03",
+                    "max": "0x06",
+                    "baseFeeUpdateFraction": "0x32f0ed"
+                },
+                "Prague": {
+                    "target": "0x06",
+                    "max": "0x09",
+                    "baseFeeUpdateFraction": "0x4c6964"
+                },
+                "Osaka": {
+                    "target": "0x06",
+                    "max": "0x09",
+                    "baseFeeUpdateFraction": "0x4c6964"
+                }
+            },
+            "chainid": "0x01"
+        },
+        "_info": {
+            "hash": "0x7720322cf380643db17988cb3ee07d8a6a9fd1baf00875b1ed8216a472efe3e9",
+            "fixture-format": "state_test",
+            "comment": "`execution-specs` generated test",
+            "filling-transition-tool": "2.19.0",
+            "description": "Test transaction at exactly the gas limit cap (2^24).",
+            "url": "https://github.com/ethereum/execution-specs/blob/tests@v21.0.1/tests/osaka/eip7825_transaction_gas_limit_cap/test_eip_mainnet.py#L25",
+            "metadata": {
+                "opcode_count": {
+                    "PUSH1": 2,
+                    "SSTORE": 1,
+                    "STOP": 1
+                },
+                "opcode_count_per_block": [
+                    {
+                        "PUSH1": 2,
+                        "SSTORE": 1,
+                        "STOP": 1
+                    }
+                ]
+            },
+            "reference-spec": "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7825.md",
+            "reference-spec-version": "1ed95cbac750539c2aac67c8cbbcc2d77974231c"
+        }
+    }
+}
